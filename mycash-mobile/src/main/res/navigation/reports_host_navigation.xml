@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reports_host_navigation"
+    app:startDestination="@id/navigation_reportsFragment">
+
+    <fragment
+        android:id="@+id/navigation_reportsFragment"
+        android:name="com.codeIn.myCash.ui.home.reports.reportsFragment.ReportsFragment"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" >
+        <action
+            android:id="@+id/action_navigation_reportsFragment_to_reports_invoiceFragment"
+            app:destination="@id/reports_invoiceFragment" />
+        <action
+            android:id="@+id/action_navigation_reportsFragment_to_salesReportDetailFragment"
+            app:destination="@id/salesReportDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_reportsFragment_to_navigation_updateProductFragment"
+            app:destination="@id/navigation_updateProductFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reports_invoiceFragment"
+        android:name="com.codeIn.myCash.ui.home.clients_vendors.invoice.ClientInvoiceFragment"
+        tools:layout="@layout/fragment_invoice">
+        <argument
+            android:name="invoiceId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/salesReportDetailFragment"
+        android:name="com.codeIn.myCash.ui.home.reports.salesDetailFragment.SalesReportDetailFragment"
+        android:label="@string/invoices"
+        tools:layout="@layout/fragment_sales_report_detail" >
+        <argument
+            android:name="startDate"
+            app:argType="string" />
+        <argument android:name="endDate" />
+        <argument
+            android:name="branchId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_salesReportDetailFragment_to_reports_invoiceFragment"
+            app:destination="@id/reports_invoiceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_updateProductFragment"
+        android:name="com.codeIn.myCash.ui.home.products.update_product.UpdateProductFragment"
+        android:label="fragment_edit_product"
+        tools:layout="@layout/fragment_edit_product" >
+        <argument
+            android:name="productId"
+            app:argType="integer"/>
+    </fragment>
+
+</navigation>

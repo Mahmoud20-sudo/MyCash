@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/Users/mahmoud08live.com/AndroidStudioProjects/MyCash/Common/src/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/mahmoud08live.com/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/mahmoud08live.com/AndroidStudioProjects/MyCash/Common/.cxx/Debug/5d485m17/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/mahmoud08live.com/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/mahmoud08live.com/AndroidStudioProjects/MyCash/Common/.cxx/Debug/5d485m17/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib::@6890427a1f51a3e7e1df": {
+      "artifactName": "native-lib",
+      "abi": "x86_64",
+      "output": "/Users/mahmoud08live.com/AndroidStudioProjects/MyCash/Common/build/intermediates/cxx/Debug/5d485m17/obj/x86_64/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="camera_permission">Camera permission is required</string>
+    <string name="scanner_cancelled">Scanner cancelled</string>
+    <string name="scan_qr_code">Scan a QR code</string>
+    <string name="error">Error happened, please try again later</string>
+
+</resources>

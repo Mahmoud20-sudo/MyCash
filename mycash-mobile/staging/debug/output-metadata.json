@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.codeIn.myCash.stage",
+  "variantName": "stagingDebug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 17,
+      "versionName": "1.5.4.stage",
+      "outputFile": "mycash-mobile-staging-debug.apk"
+    }
+  ],
+  "elementType": "File"
+}

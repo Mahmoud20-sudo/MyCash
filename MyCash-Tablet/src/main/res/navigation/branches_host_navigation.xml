@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/branches_host_navigation.xml"
+    app:startDestination="@id/navigation_branchesFragment">
+
+    <fragment
+        android:id="@+id/navigation_branchesFragment"
+        android:name="com.codeIn.myCash.ui.options.branches.branches.BranchesFragment"
+        android:label="fragment_branches"
+        tools:layout="@layout/fragment_branches" >
+        <action
+            android:id="@+id/action_navigation_branchesFragment_to_navigation_newBranchFragment"
+            app:destination="@id/navigation_newBranchFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_branchesFragment_to_branchDetailsFragment"
+            app:destination="@id/branchDetailsFragment" />
+        <action
+            android:id="@+id/action_navigation_branchesFragment_to_editBranchFragment"
+            app:destination="@id/editBranchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_newBranchFragment"
+        android:name="com.codeIn.myCash.ui.options.branches.add_branch.NewBranchFragment"
+        android:label="fragment_new_branch"
+        tools:layout="@layout/fragment_new_branch" />
+    <fragment
+        android:id="@+id/branchDetailsFragment"
+        android:name="com.codeIn.myCash.ui.options.branches.branch_details.BranchDetailsFragment"
+        android:label="BranchDetailsFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="city"
+            app:argType="string" />
+        <argument
+            android:name="status"
+            app:argType="integer" />
+        <argument
+            android:name="address"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/editBranchFragment"
+        android:name="com.codeIn.myCash.ui.options.branches.edit_branch.EditBranchFragment"
+        android:label="EditBranchFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="main"
+            app:argType="integer" />
+        <argument
+            android:name="phone"
+            app:argType="integer" />
+        <argument
+            android:name="city"
+            app:argType="string" />
+        <argument
+            android:name="address"
+            app:argType="string" />
+        <argument
+            android:name="extraInfo"
+            app:argType="string" />
+    </fragment>
+</navigation>

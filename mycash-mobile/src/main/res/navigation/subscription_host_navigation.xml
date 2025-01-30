@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_host_navigation"
+    app:startDestination="@id/currentSubscriptionFragment">
+    <fragment
+        android:id="@+id/currentSubscriptionFragment"
+        android:name="com.codeIn.myCash.ui.options.subscriptions.current_subscription.CurrentSubscriptionFragment"
+        android:label="fragment_subscriptions_options"
+        tools:layout="@layout/fragment_subscriptions_options" >
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_currentSubscriptionFragment_to_anotherSubscriptionsFragment"
+            app:destination="@id/anotherSubscriptionsFragment" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_currentSubscriptionFragment_to_deviceSelectionFragment"
+            app:destination="@id/deviceSelectionFragment" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_currentSubscriptionFragment_to_paymentMethodFragment"
+            app:destination="@id/paymentMethodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anotherSubscriptionsFragment"
+        tools:layout="@layout/fragment_subscriptions_in"
+        android:name="com.codeIn.myCash.ui.options.subscriptions.another_subscription.AnotherSubscriptionsFragment"
+        android:label="AnotherSubscriptionsFragment" >
+        <argument
+            android:name="device_subscription"
+            app:argType="com.codeIn.myCash.features.user.data.settings.remote.response.device.DeviceModel" />
+        <argument
+            android:name="change_device"
+            app:argType="string"/>
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_anotherSubscriptionsFragment_to_deviceSelectionFragment"
+            app:destination="@id/deviceSelectionFragment" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_anotherSubscriptionsFragment_to_paymentMethodFragment"
+            app:destination="@id/paymentMethodFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_device_selection_in"
+        android:id="@+id/deviceSelectionFragment"
+        android:name="com.codeIn.myCash.ui.options.subscriptions.devices_subscription.DeviceSelectionFragment"
+        android:label="DeviceSelectionFragment" >
+        <argument
+            android:name="package_id"
+            app:argType="integer" />
+        <argument
+            android:name="package_subscription"
+            app:argType="com.codeIn.myCash.features.user.data.settings.remote.response.subscription.Package" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_deviceSelectionFragment_to_paymentMethodFragment"
+            app:destination="@id/paymentMethodFragment" />
+
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_payment_method_in"
+        android:id="@+id/paymentMethodFragment"
+        android:name="com.codeIn.myCash.ui.options.subscriptions.payment_method.PaymentMethodFragment"
+        android:label="PaymentMethodFragment" >
+        <argument
+            android:name="device_subscription"
+            app:argType="com.codeIn.myCash.features.user.data.settings.remote.response.device.DeviceModel" />
+        <argument
+            android:name="package_subscription"
+            app:argType="com.codeIn.myCash.features.user.data.settings.remote.response.subscription.Package" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_paymentMethodFragment_to_paymentGatewayFragment"
+            app:destination="@id/paymentGatewayFragment" />
+    </fragment>
+    <fragment
+        android:name="com.codeIn.myCash.ui.options.subscriptions.payment_gateway.PaymentGatewayFragment"
+        tools:layout="@layout/fragment_payment_gateway_home"
+        android:id="@+id/paymentGatewayFragment"
+        android:label="PaymentGatewayFragment" >
+        <argument
+            android:name="payment_link"
+            app:argType="string" />
+    </fragment>
+</navigation>

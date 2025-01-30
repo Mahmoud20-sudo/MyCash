@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context="com.codeIn.myCash.ui.home.clients_vendors.add_vendor.AddVendorFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/content_description_back_arrow"
+            android:focusable="true"
+            android:padding="14dp"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:text="@string/add_vendor"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+            app:layout_constraintTop_toTopOf="@id/back_arrow" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:scrollbarThumbVertical="@drawable/scroll_bar"
+            android:scrollbarSize="1px"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="37dp"
+            app:layout_constraintBottom_toTopOf="@id/buttons_layout"
+            app:layout_constraintTop_toBottomOf="@id/title_textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sub_title_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/vendor_info"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="14sp" />
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/name_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="name"
+                    android:layout_marginVertical="6dp"
+                    android:inputType="text"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack60"
+                    android:textSize="12sp"
+                    app:myStartIconDrawable="@drawable/ic_profile"
+                    app:myHint="@string/vendor_name"
+                    app:myHintEnabled="true" />
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/email_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="emailAddress"
+                    android:layout_marginVertical="6dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack60"
+                    android:textSize="12sp"
+                    app:myStartIconDrawable="@drawable/ic_sms"
+                    app:myHint="@string/email_address"
+                    app:myHintEnabled="true" />
+                <include
+                    android:id="@+id/phone_layout"
+                    layout="@layout/layout_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="6dp"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_imageView" />
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/tax_number_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="name"
+                    android:layout_marginVertical="6dp"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack60"
+                    android:textSize="12sp"
+                    app:myStartIconDrawable="@drawable/ic_shield_security20"
+                    app:myHint="@string/tax_number2"
+                    app:myHintEnabled="true" />
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/commercial_registration_no_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="postalAddress"
+                    android:layout_marginVertical="6dp"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack60"
+                    android:textSize="12sp"
+                    app:myStartIconDrawable="@drawable/ic_document20"
+                    app:myHint="@string/commercial_registration_no"
+                    app:myHintEnabled="true" />
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/address_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="postalAddress"
+                    android:layout_marginVertical="6dp"
+                    android:inputType="text"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack60"
+                    android:textSize="12sp"
+                    app:myStartIconDrawable="@drawable/ic_location20"
+                    app:myHint="@string/address"
+                    app:myHintEnabled="true" />
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/extra_info_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="name"
+                    android:layout_marginVertical="6dp"
+                    android:inputType="text"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack60"
+                    android:textSize="12sp"
+                    app:myStartIconDrawable="@drawable/ic_message_add"
+                    app:myHint="@string/extra_info"
+                    app:myHintEnabled="true" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_Button"
+                style="@style/big_button_Style"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/add"
+                app:backgroundTint="@null"
+                app:cornerRadius="100dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_Button"
+                style="@style/big_button_Style_secondary"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                app:backgroundTint="@null"
+                app:cornerRadius="100dp" />
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/loading_layout"
+            layout="@layout/layout_loading"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

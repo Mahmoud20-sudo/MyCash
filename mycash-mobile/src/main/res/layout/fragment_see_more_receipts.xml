@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.codeIn.myCash.ui.home.invoices.seeMoreReceipts.SeeMoreReceiptsFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginVertical="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/title_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="16dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/receipts"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_marginEnd="16dp"
+                    android:id="@+id/back_arrow"
+                    style="@style/back_arrow_"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/content_description_back_arrow"
+                    android:src="@drawable/ic_arrow_left" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#99E8E8E8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/log_out_imageView">
+
+                <TextView
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_weight=".55"
+                    android:queryHint="@string/search_with_receipt_number"
+                    android:searchIcon="@drawable/ic_search_normal"
+                    android:hint="@string/search_with_date"
+                    android:fontFamily="@font/regular"
+                    android:drawablePadding="16dp"
+                    android:textSize="12sp"
+                    android:textAlignment="viewStart"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="16dp"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack40"
+                    android:drawableStart="@drawable/ic_search_normal"
+                    />
+
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="true"
+                    android:contentDescription="@string/settings"
+                    android:focusable="true"
+                    android:paddingVertical="8dp"
+                    android:src="@drawable/ic_setting" />
+
+                <ImageView
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="true"
+                    android:id="@+id/refresh"
+                    android:contentDescription="@string/refresh"
+                    android:focusable="true"
+                    android:paddingVertical="8dp"
+                    android:src="@drawable/ic_settings_refresh_2" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:clickable="false"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:text="@string/all"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/completed_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:text="@string/payment_completed"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/unCompleted_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:text="@string/payment_uncompleted"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#99E8E8E8" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/receipt_recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="34dp"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical"
+                android:overScrollMode="ifContentScrolls"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_receipt" />
+
+
+        </LinearLayout>
+        <include
+            android:id="@+id/loading_layout"
+            layout="@layout/layout_loading"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="50dp"
+    android:background="@drawable/bg_bottom_sheet">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="53dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="16sp"
+        app:cardCornerRadius="2.5dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="53dp"
+            android:layout_height="5dp"
+            app:dividerColor="#C5C4C2" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_close_circle"
+        app:layout_constraintBottom_toBottomOf="@id/pick_date_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/pick_date_textView" />
+
+    <TextView
+        android:id="@+id/pick_date_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="42dp"
+        android:fontFamily="@font/regular"
+        android:text="@string/pick_date"
+        android:textColor="@color/mainBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <DatePicker
+        android:id="@+id/date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:layout_marginTop="85dp"
+        android:theme="@style/PickerStyle"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirm_Button"
+        style="@style/big_button_Style"
+        android:layout_marginTop="19dp"
+        android:text="@string/pick_date"
+        app:backgroundTint="@null"
+        app:cornerRadius="16dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_picker" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

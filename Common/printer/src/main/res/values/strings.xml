@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_permission">No positioning permission</string>
+    <string name="permission">Authority</string>
+    <string name="no_read">No read file permission</string>
+    <string name="not_connected">not connected</string>
+    <string name="conn_fail">Connection failed</string>
+    <string name="conn_success">connection succeeded</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="none_usb_device">No USB device</string>
+</resources>

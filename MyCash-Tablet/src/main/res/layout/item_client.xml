@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/bg_white_s1_main_ripple"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_s1_main_ripple"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/regular"
+            android:lines="1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_profile"
+            tools:text="سعود الغمري " />
+
+        <TextView
+            android:id="@+id/second_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/regular"
+            android:lines="1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack60"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/phone_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/regular"
+            android:lines="1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack"
+            android:textSize="11sp"
+            tools:text="59156560" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#99E8E8E8" />
+
+        <LinearLayout
+            android:id="@+id/receipt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_s1_main_ripple"
+            android:clickable="false"
+            android:elevation="2dp"
+            android:focusable="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/receipt_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/regular"
+                android:lines="1"
+                android:paddingVertical="8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_receipt_2"
+                tools:text="22 sar" />
+
+            <TextView
+                android:id="@+id/pay_receipt_textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_transparent_r100_s1_white_ripple"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/regular"
+                android:lines="1"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                android:text="@string/pay_receipt"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/mainBlack"
+                android:textSize="12sp"
+                app:drawableEndCompat="@drawable/ic_arrow_circle" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

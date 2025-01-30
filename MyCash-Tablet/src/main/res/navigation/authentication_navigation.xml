@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authentication_navigation"
+    app:startDestination="@id/navigationLogInFragment">
+
+    <fragment
+        android:id="@+id/navigationLogInFragment"
+        android:name="com.codeIn.myCash.ui.authentication.log_in.log_in.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_navigationLogInFragment_to_navigationForgotPasswordFragment"
+            app:destination="@id/navigationForgotPasswordFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigationLogInFragment_to_navigationCreateAccountFragment"
+            app:destination="@id/navigationCreateAccountFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_navigationLogInFragment_to_otpVerificationSignUpFragment"
+            app:destination="@id/otpVerificationSignUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationForgotPasswordFragment"
+        android:name="com.codeIn.myCash.ui.authentication.log_in.forgot_password.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_navigationForgotPasswordFragment_to_navigationOtpVerificationFragment"
+            app:destination="@id/navigationOtpVerificationFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationOtpVerificationFragment"
+        android:name="com.codeIn.myCash.ui.authentication.log_in.otp_verification.OtpVerificationFragment"
+        android:label="fragment_otp_verification"
+        tools:layout="@layout/fragment_otp_verification" >
+        <action
+            android:id="@+id/action_navigationOtpVerificationFragment_to_navigationResetPasswordFragment"
+            app:destination="@id/navigationResetPasswordFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/navigationLogInFragment" />
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationResetPasswordFragment"
+        android:name="com.codeIn.myCash.ui.authentication.log_in.reset_password.ResetPasswordFragment"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password" />
+    <fragment
+        android:id="@+id/navigationSubscriptionsFragment"
+        android:name="com.codeIn.myCash.ui.authentication.sign_up.subscriptions.SubscriptionsFragment"
+        android:label="fragment_subscriptions"
+        tools:layout="@layout/fragment_subscriptions" >
+        <action
+            android:id="@+id/action_navigationSubscriptionsFragment_to_navigationDeviceSelectionFragment"
+            app:destination="@id/navigationDeviceSelectionFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationCreateAccountFragment"
+        android:name="com.codeIn.myCash.ui.authentication.sign_up.create_account.CreateAccountFragment"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" >
+        <action
+            android:id="@+id/action_navigationCreateAccountFragment_to_navigationTermsAndConditionsFragment"
+            app:destination="@id/navigationTermsAndConditionsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigationCreateAccountFragment_to_navigationOtpVerificationSignUpFragment"
+            app:destination="@id/navigationOtpVerificationSignUpFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigationCreateAccountFragment_to_navigationLogInFragment"
+            app:destination="@id/navigationLogInFragment"
+            app:popUpTo="@id/authentication_navigation"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <argument
+            android:name="register_type"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationTermsAndConditionsFragment"
+        android:name="com.codeIn.myCash.ui.authentication.sign_up.termsCondition.TermsAndConditionsFragment"
+        android:label="fragment_terms_and_conditions"
+        tools:layout="@layout/fragment_terms_and_conditions" >
+        <argument
+            android:name="checked"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationOtpVerificationSignUpFragment"
+        android:name="com.codeIn.myCash.ui.authentication.sign_up.otp_verification.OtpVerificationSignUpFragment"
+        android:label="fragment_otp_verification_sign_up"
+        tools:layout="@layout/fragment_otp_verification_sign_up" >
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+        <argument
+            android:name="register_type"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_navigationOtpVerificationSignUpFragment_to_navigationSubscriptionsFragment"
+            app:destination="@id/navigationSubscriptionsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigationPaymentMethodFragment"
+        android:name="com.codeIn.myCash.ui.authentication.sign_up.payment_method.PaymentMethodFragment"
+        android:label="fragment_payment_method"
+        tools:layout="@layout/fragment_payment_method" >
+        <argument
+            android:name="device_subscription"
+            app:argType="com.codeIn.myCash.features.user.data.settings.remote.response.device.DeviceModel" />
+        <argument
+            android:name="package_subscription"
+            app:argType="com.codeIn.myCash.features.user.data.settings.remote.response.subscription.Package" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_navigationPaymentMethodFragment_to_paymentGatewayFragment"
+            app:destination="@id/paymentGatewayFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigationDeviceSelectionFragment"
+        android:name="com.codeIn.myCash.ui.authentication.sign_up.device_selection.DeviceSelectionFragment"
+        android:label="fragment_device_selection"
+        tools:layout="@layout/fragment_device_selection" >
+        <argument
+            android:name="package_id"
+            app:argType="integer" />
+        <argument
+            android:name="package_subscription"
+            app:argType="com.codeIn.myCash.features.user.data.settings.remote.response.subscription.Package" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_navigationDeviceSelectionFragment_to_navigationPaymentMethodFragment"
+            app:destination="@id/navigationPaymentMethodFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_payment_gateway"
+        android:id="@+id/paymentGatewayFragment"
+        android:name="com.codeIn.myCash.ui.authentication.sign_up.payment_gateway.PaymentGatewayFragment"
+        android:label="PaymentGatewayFragment" >
+        <argument
+            android:name="payment_link"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_otp_verification_sign_up"
+        android:id="@+id/otpVerificationSignUpFragment"
+        android:name="com.codeIn.myCash.ui.authentication.log_in.otp_verification_account.OtpVerificationSignUpFragment"
+        android:label="OtpVerificationSignUpFragment">
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+    </fragment>
+</navigation>

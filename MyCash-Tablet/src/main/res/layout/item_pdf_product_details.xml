@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/description_textView"
+        style="@style/pdf_table_text_secondary"
+        android:layout_weight="29" />
+
+    <TextView
+        android:id="@+id/unit_price_textView"
+        style="@style/pdf_table_text_secondary"
+        android:layout_weight="30" />
+
+    <TextView
+        android:id="@+id/quantity_textView"
+        style="@style/pdf_table_text_secondary"
+        android:layout_weight="30" />
+
+    <TextView
+        android:id="@+id/discount_textView"
+        style="@style/pdf_table_text_secondary"
+        android:layout_weight="30" />
+
+    <TextView
+        android:id="@+id/total_before_vat_textView"
+        style="@style/pdf_table_text_secondary"
+        android:layout_weight="28" />
+
+    <TextView
+        android:id="@+id/vat_textView"
+        style="@style/pdf_table_text_secondary"
+        android:layout_weight="30" />
+
+    <TextView
+        android:id="@+id/vat_amount_textView"
+        style="@style/pdf_table_text_secondary"
+        android:layout_weight="30" />
+
+    <TextView
+        android:id="@+id/total_including_vat_textView"
+        style="@style/pdf_table_text_secondary"
+        android:layout_weight="28" />
+
+</LinearLayout>

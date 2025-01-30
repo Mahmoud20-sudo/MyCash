@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "933937090553",
+    "project_id": "mycash-mobile",
+    "storage_bucket": "mycash-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933937090553:android:afa2bbbadf803e06bb7728",
+        "android_client_info": {
+          "package_name": "com.codeIn.myCash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkFB-KZhBI3OQGILsifpjgl-uW3NBmw8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933937090553:android:0c0d5572f5e03bd3bb7728",
+        "android_client_info": {
+          "package_name": "com.codeIn.myCash.stage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkFB-KZhBI3OQGILsifpjgl-uW3NBmw8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

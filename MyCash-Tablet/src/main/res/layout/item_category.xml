@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="4dp"
+    android:background="@drawable/bg_white_r100_s1_stroke_ripple">
+
+    <TextView
+        android:id="@+id/name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/regular"
+        android:paddingHorizontal="24dp"
+        android:textColor="@color/mainBlack"
+        android:textSize="12sp"
+        tools:text="Apple" />
+</FrameLayout>

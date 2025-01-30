@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/navigation_productsHostFragment">
+
+    <fragment
+        android:id="@+id/navigation_productsHostFragment"
+        android:name="com.codeIn.myCash.ui.home.products.ProductsHostFragment"
+        android:label="fragment_products_host"
+        tools:layout="@layout/fragment_products_host" />
+
+    <fragment
+        android:id="@+id/navigation_reportsHostFragment"
+        android:name="com.codeIn.myCash.ui.home.reports.reportHost.ReportsHostFragment"
+        android:label="fragment_reports_host" />
+    <fragment
+        android:id="@+id/navigation_clientsHostFragment"
+        android:name="com.codeIn.myCash.ui.home.clients_vendors.ClientsHostFragment"
+        android:label="fragment_clients_host"
+        tools:layout="@layout/fragment_clients_host" />
+    <fragment
+        android:id="@+id/navigation_transactionsHostFragment"
+        android:name="com.codeIn.myCash.ui.home.expenses.TransactionsHostFragment"
+        android:label="fragment_transactions_host"
+        tools:layout="@layout/fragment_transactions_host" />
+    <fragment
+        android:id="@+id/navigation_invoicesHostFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.InvoicesHostFragment"
+        android:label="fragment_invoices_host"
+        tools:layout="@layout/fragment_invoices_host" />
+    <fragment
+        android:id="@+id/navigation_notificationsFragment"
+        android:name="com.codeIn.myCash.ui.options.notifications.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_draftsFragment"
+        android:name="com.codeIn.myCash.ui.options.drafts.DraftsFragment"
+        android:label="fragment_drafts"
+        tools:layout="@layout/fragment_drafts" />
+    <fragment
+        android:id="@+id/navigation_helpFragment"
+        android:name="com.codeIn.myCash.ui.options.help.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/navigation_subscriptionHostFragment"
+        android:name="com.codeIn.myCash.ui.options.subscriptions.SubscriptionHostFragment"
+        android:label="fragment_subscriptions_host"
+        tools:layout="@layout/fragment_subscription_host" />
+    <fragment
+        android:id="@+id/navigation_branchesHostFragment"
+        android:name="com.codeIn.myCash.ui.options.branches.BranchesHostFragment"
+        android:label="fragment_branches_host"
+        tools:layout="@layout/fragment_branches_host" />
+    <fragment
+        android:id="@+id/navigation_settingsHostFragment"
+        android:name="com.codeIn.myCash.ui.options.settings.SettingsHostFragment"
+        android:label="fragment_settings_host"
+        tools:layout="@layout/fragment_settings_host" />
+    <fragment
+        android:id="@+id/navigation_profileHostFragment"
+        android:name="com.codeIn.myCash.ui.options.profile.ProfileHostFragment"
+        android:label="fragment_profile_host"
+        tools:layout="@layout/fragment_subscription_host" />
+    <fragment
+        android:id="@+id/navigation_usersHostFragment"
+        android:name="com.codeIn.myCash.ui.options.users.UsersHostFragment"
+        android:label="fragment_users_host"
+        tools:layout="@layout/fragment_users_host" />
+    <fragment
+        android:id="@+id/paymentGatewayFragment"
+        android:name="com.codeIn.myCash.ui.home.paymrnt_gateway.PaymentGatewayFragment"
+        android:label="PaymentGatewayFragment">
+        <argument
+            android:name="payment_link"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_mada_payment"
+        android:id="@+id/madaPaymentFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.madaPayment.MadaPaymentFragment"
+        android:label="MadaPaymentFragment" />
+</navigation>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginStart="449dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="49dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <TextView
+                style="@style/settings_text_item"
+                android:padding="16dp"
+                android:text="@string/filter"
+                android:textAlignment="center"
+                android:textColor="@color/mainBlack60"
+                android:textSize="14sp" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/date_textView"
+                style="@style/home_filter_text"
+                android:hint="@string/date_hint"
+                app:drawableStartCompat="@drawable/ic_calendar" />
+
+            <TextView
+                android:id="@+id/lowest_price_textView"
+                style="@style/home_filter_text"
+                android:text="@string/lowest_price"
+                app:drawableStartCompat="@drawable/ic_money_recive" />
+
+            <TextView
+                android:id="@+id/highest_price_textView"
+                style="@style/home_filter_text"
+                android:text="@string/highest_price"
+                app:drawableStartCompat="@drawable/ic_money_send" />
+
+            <TextView
+                android:id="@+id/recently_added_textView"
+                style="@style/home_filter_text"
+                android:text="@string/recently_added"
+                app:drawableStartCompat="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/name_textView"
+                style="@style/home_filter_text"
+                android:text="@string/name"
+                app:drawableStartCompat="@drawable/ic_sort" />
+
+            <TextView
+                android:id="@+id/percentage_discount_textView"
+                style="@style/home_filter_text"
+                android:text="@string/percentage_discount"
+                app:drawableStartCompat="@drawable/ic_discount_circle" />
+
+            <TextView
+                android:id="@+id/price_discount_textView"
+                style="@style/home_filter_text"
+                android:text="@string/price_discount"
+                app:drawableStartCompat="@drawable/ic_discount_circle" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="24dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continue_Button"
+                style="@style/big_button_Style"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/continue_1"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_Button"
+                style="@style/big_button_Style_secondary"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

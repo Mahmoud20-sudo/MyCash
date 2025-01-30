@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_17sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:background="@drawable/bg_main_black10_r12_s1">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/buyCV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_1sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/reportIv"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_marginVertical="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_receipt_main_black" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reportTitleTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:fontFamily="@font/bill_regular"
+                android:text="@string/purchasingReports"
+                android:textColor="@color/mainBlack60"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@+id/reportCountTv"
+                app:layout_constraintStart_toEndOf="@+id/reportIv"
+                app:layout_constraintTop_toTopOf="@+id/reportIv"
+                app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reportCountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:fontFamily="@font/bill_regular"
+                android:textColor="@color/mainBlack60"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/reportTitleTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/reportTitleTv"
+                app:layout_constraintTop_toTopOf="@+id/reportTitleTv"
+                app:layout_goneMarginStart="@dimen/_17sdp"
+                tools:text="#01" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/invoiceNumberTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/bill_medium"
+        android:text="@string/invoice_number"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintEnd_toStartOf="@+id/invoiceNumberValueTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyCV"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/invoiceNumberValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:fontFamily="@font/bill_medium"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/invoiceNumberTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/invoiceNumberTv"
+        app:layout_constraintTop_toTopOf="@+id/invoiceNumberTv"
+        app:layout_goneMarginStart="@dimen/_17sdp"
+        tools:text="2233R544" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/totalTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:fontFamily="@font/bill_medium"
+        android:text="@string/total"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintEnd_toStartOf="@+id/totalValueTv"
+        app:layout_constraintStart_toStartOf="@+id/invoiceNumberTv"
+        app:layout_constraintTop_toBottomOf="@+id/invoiceNumberTv"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/totalValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/bill_medium"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/totalTv"
+        app:layout_constraintEnd_toEndOf="@+id/invoiceNumberValueTv"
+        app:layout_constraintStart_toEndOf="@id/totalTv"
+        app:layout_constraintTop_toTopOf="@+id/totalTv"
+        app:layout_goneMarginStart="@dimen/_17sdp"
+        tools:text="23652 ر.س" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/taxTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:fontFamily="@font/bill_medium"
+        android:text="@string/tax"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintEnd_toStartOf="@+id/taxValueTv"
+        app:layout_constraintStart_toStartOf="@+id/totalTv"
+        app:layout_constraintTop_toBottomOf="@+id/totalTv"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/taxValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/bill_medium"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/taxTv"
+        app:layout_constraintEnd_toEndOf="@+id/totalValueTv"
+        app:layout_constraintStart_toEndOf="@id/taxTv"
+        app:layout_constraintTop_toTopOf="@+id/taxTv"
+        app:layout_goneMarginStart="@dimen/_17sdp"
+        tools:text="23652 ر.س" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/priceIncludesTaxTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:fontFamily="@font/bill_medium"
+        android:text="@string/price_includes_tax"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintEnd_toStartOf="@+id/priceIncludesTaxValueTv"
+        app:layout_constraintStart_toStartOf="@+id/taxTv"
+        app:layout_constraintTop_toBottomOf="@+id/taxTv"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/priceIncludesTaxValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/bill_medium"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/priceIncludesTaxTv"
+        app:layout_constraintEnd_toEndOf="@+id/taxValueTv"
+        app:layout_constraintStart_toEndOf="@id/priceIncludesTaxTv"
+        app:layout_constraintTop_toTopOf="@+id/priceIncludesTaxTv"
+        app:layout_goneMarginStart="@dimen/_17sdp"
+        tools:text="23652 ر.س" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/clientNameTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_17sdp"
+        android:fontFamily="@font/bill_medium"
+        android:text="@string/client_name"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clientNameValueTv"
+        app:layout_constraintStart_toStartOf="@+id/priceIncludesTaxTv"
+        app:layout_constraintTop_toBottomOf="@+id/priceIncludesTaxTv"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/clientNameValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/bill_medium"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/clientNameTv"
+        app:layout_constraintEnd_toEndOf="@+id/priceIncludesTaxValueTv"
+        app:layout_constraintStart_toEndOf="@id/clientNameTv"
+        app:layout_constraintTop_toTopOf="@+id/clientNameTv"
+        app:layout_goneMarginStart="@dimen/_17sdp"
+        tools:text="Mohamed Keshawy" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

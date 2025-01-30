@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="49dp"
+    android:paddingStart="10dp"
+    android:maxWidth="600dp"
+    android:layout_gravity="center"
+    android:layout_centerInParent="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="400dp"
+
+        android:background="@drawable/bg_white_r12_s1_stroke60"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/edit_product_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/regular"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:text="@string/edit_product"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack70"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_edit_svg"
+            app:layout_constraintBottom_toTopOf="@id/delete_product_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/delete_product_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/regular"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:text="@string/delete_product"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack70"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_trash_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_product_textView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

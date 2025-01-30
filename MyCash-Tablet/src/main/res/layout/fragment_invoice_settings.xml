@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingVertical="16dp"
+    tools:context="com.codeIn.myCash.ui.options.settings.invoice_settings.InvoiceSettingsFragment">
+
+
+    <include
+        layout="@layout/icon_mada_layout"
+        android:id="@+id/mada_layout"
+        android:layout_alignParentStart="true"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@id/mada_layout"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/back_arrow" />
+
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/regular"
+            android:text="@string/invoice_settings"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back_arrow" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="11dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back_arrow">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/system_settings"
+                    android:textColor="@color/mainBlack40"
+                    android:textSize="14sp" />
+
+                <androidx.cardview.widget.CardView
+                    style="@style/settings_card_item"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_white_s1_main_ripple"
+                        android:orientation="vertical">
+
+                        <Switch
+                            android:id="@+id/commercial_registry_name_Switch"
+                            style="@style/settings_switch_item"
+                            android:background="@null"
+                            android:drawableStart="@drawable/ic_receipt_edit"
+                            android:paddingBottom="2dp"
+                            android:text="@string/commercial_registry_name"
+                            android:textColor="@color/mainBlack60"
+                            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                        <TextView
+                            android:id="@+id/commercial_registry_name_textView"
+                            style="@style/settings_text_item"
+                            android:layout_marginStart="40dp"
+                            android:background="@null"
+                            android:paddingTop="0dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/settings_card_item"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_white_s1_main_ripple"
+                        android:orientation="vertical">
+
+                        <Switch
+                            android:id="@+id/commercial_registration_no_Switch"
+                            style="@style/settings_switch_item"
+                            android:background="@null"
+                            android:drawableStart="@drawable/ic_document"
+                            android:paddingBottom="2dp"
+                            android:text="@string/commercial_registration_no"
+                            android:textColor="@color/mainBlack60"
+                            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                        <TextView
+                            android:id="@+id/commercial_registration_no_textView"
+                            style="@style/settings_text_item"
+                            android:layout_marginStart="40dp"
+                            android:background="@null"
+                            android:paddingTop="0dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/settings_card_item"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_white_s1_main_ripple"
+                        android:orientation="vertical">
+
+                        <Switch
+                            android:id="@+id/tax_registration_number_Switch"
+                            style="@style/settings_switch_item"
+                            android:background="@null"
+                            android:drawableStart="@drawable/ic_shield_security"
+                            android:paddingBottom="2dp"
+                            android:text="@string/tax_registration_number"
+                            android:textColor="@color/mainBlack60"
+                            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                        <TextView
+                            android:id="@+id/tax_registration_number_textView"
+                            style="@style/settings_text_item"
+                            android:layout_marginStart="40dp"
+                            android:background="@null"
+                            android:paddingTop="0dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/settings_card_item"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_white_s1_main_ripple"
+                        android:orientation="vertical">
+
+                        <Switch
+                            android:id="@+id/vat_15_Switch"
+                            style="@style/settings_switch_item"
+                            android:background="@null"
+                            android:drawableStart="@drawable/ic_receipt_disscount"
+                            android:paddingBottom="2dp"
+                            android:text="@string/vat_15"
+                            android:textColor="@color/mainBlack60"
+                            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                        <TextView
+                            android:id="@+id/vat_15_textView"
+                            style="@style/settings_text_item"
+                            android:layout_marginStart="40dp"
+                            android:background="@null"
+                            android:paddingTop="0dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@color/stroke30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/setting_order_no"
+                    android:textColor="@color/mainBlack40"
+                    android:textSize="14sp" />
+
+                <androidx.cardview.widget.CardView
+                    style="@style/settings_card_item"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:id="@+id/start_sale_invoice_order_no"
+                        style="@style/settings_text_item"
+                        android:text="@string/start_order_no"
+                        app:drawableStartCompat="@drawable/ic_note" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/settings_card_item"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:id="@+id/start_purchase_invoice_order_no"
+                        style="@style/settings_text_item"
+                        android:text="@string/start_purchase_order_no"
+                        app:drawableStartCompat="@drawable/ic_note" />
+                </androidx.cardview.widget.CardView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@color/stroke30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/invoice_type"
+                    android:textColor="@color/mainBlack40"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/simple_invoice_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingVertical="9dp"
+                        android:text="@string/simple_invoice"
+                        android:textColor="@color/mainBlack80"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tax_invoice_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingVertical="9dp"
+                        android:text="@string/tax_invoice"
+                        android:textColor="@color/mainBlack80"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/invoice_footer_message_editText"
+                    style="@style/main_editText"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:autofillHints="name"
+                    android:drawableStart="@drawable/ic_archive_book"
+                    android:hint="@string/invoice_footer_message"
+                    android:inputType="text" />
+
+                <androidx.cardview.widget.CardView
+                    style="@style/settings_card_item"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <Switch
+                        android:id="@+id/product_description_Switch"
+                        style="@style/settings_switch_item"
+                        android:drawableStart="@drawable/ic_settings_3d_cube"
+                        android:text="@string/product_description"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/settings_card_item"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <Switch
+                        android:id="@+id/clients_info_Switch"
+                        style="@style/settings_switch_item"
+                        android:drawableStart="@drawable/ic_people"
+                        android:text="@string/clients_info"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/settings_card_item"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <Switch
+                        android:id="@+id/cashier_info_Switch"
+                        style="@style/settings_switch_item"
+                        android:drawableStart="@drawable/ic_settings_tag_user"
+                        android:text="@string/cashier_info"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/QR_codes"
+                    android:textColor="@color/mainBlack40"
+                    android:textSize="14sp" />
+
+                <androidx.cardview.widget.CardView
+                    style="@style/settings_card_item"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="12dp">
+
+                    <Switch
+                        android:id="@+id/zatca_qr_Switch"
+                        style="@style/settings_switch_item"
+                        android:drawableStart="@drawable/ic_settings_scan_barcode"
+                        android:text="@string/zatca_qr"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/settings_card_item"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <Switch
+                        android:id="@+id/my_cash_qr_Switch"
+                        style="@style/settings_switch_item"
+                        android:drawableStart="@drawable/ic_settings_qrcode"
+                        android:text="@string/my_cash_qr"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+                </androidx.cardview.widget.CardView>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/save_Button"
+                    style="@style/big_button_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_white_r100_s1_secondary_ripple"
+                    android:minWidth="99dp"
+                    android:text="@string/save"
+                    android:textColor="@color/primaryColor"
+                    app:backgroundTint="@null"
+                    app:cornerRadius="100dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/loading_layout"
+            layout="@layout/layout_loading"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

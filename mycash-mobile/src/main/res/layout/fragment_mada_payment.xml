@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="40dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:padding="16dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:id="@+id/logo"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_logo_login"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:orientation="horizontal"
+            android:id="@+id/paylayout"
+            android:layoutDirection="ltr"
+            android:layout_marginBottom="24dp"
+            android:layout_alignParentBottom="true"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/cancel"
+                android:id="@+id/pay"
+                android:background="@drawable/round_twenty_button_active"
+                android:backgroundTint="@color/secondaryColor"
+                android:paddingVertical="8dp"
+                android:text="@string/payPayment"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:fontFamily="@font/semi_bold"/>
+            <TextView
+                android:layout_marginStart="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancel"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:paddingVertical="12dp"
+                android:textColor="@color/secondaryColor"
+                android:textSize="16sp"
+                android:fontFamily="@font/semi_bold"
+                android:text="@string/cancelPayment"
+                android:gravity="center"
+                />
+
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/logo"
+            android:layout_above="@id/paylayout"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginVertical="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:text="@string/amount_mada"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/round_twenty_button_active"
+                    android:backgroundTint="#FAFAFA">
+
+                    <TextView
+                        android:id="@+id/currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/regular"
+                        android:gravity="start"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="32dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/RAS"
+                        android:textColor="@color/mainBlack40"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_toStartOf="@id/currency"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center"
+                        android:hint="0.0"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="28sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="60dp"
+                    android:background="#FAFAFA" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/semi_bold"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/rnnText"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/rrn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_twenty_button_active"
+                    android:fontFamily="@font/semi_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/refund"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:drawableStart="@drawable/rrn"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/semi_bold"
+                    android:gravity="center"
+                    android:text="@string/refundPayment"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+  
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

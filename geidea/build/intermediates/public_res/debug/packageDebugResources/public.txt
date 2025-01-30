@@ -1,0 +1,10 @@
+style Gd_Base_Theme_DayNight_NoActionBar
+style Gd_Base_Theme_Light_NoActionBar
+style Gd_Base_Theme_NoActionBar
+style Gd_Base_Widget_ImageView_Logo_Merchant
+style Gd_Theme_DayNight_NoActionBar
+drawable gd_ic_meeza_logo
+attr gd_merchantLogoImageViewStyle
+attr gd_primaryButtonStyle
+attr gd_secondaryButtonStyle
+attr gd_textInputExposedDropdownMenuStyle

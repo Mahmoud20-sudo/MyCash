@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    tools:context="com.codeIn.myCash.ui.authentication.log_in.log_in.LogInFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="700dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="14sp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/logo_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="103dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_logo_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:viewBindingIgnore="true" />
+
+        <include
+            android:id="@+id/phone_layout"
+            layout="@layout/layout_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/logo_imageView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_text_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:endIconDrawable="@drawable/selector_ic_password_toggle"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@drawable/selector_cl_password_tint"
+            app:hintEnabled="false"
+            app:hintTextAppearance="@android:style/TextAppearance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_layout"
+            app:startIconTint="@drawable/selector_cl_password_tint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_edittext"
+                android:drawableStart="@drawable/ic_password_start"
+                android:drawablePadding="16dp"
+                android:drawableTint="@drawable/selector_cl_password_tint"
+                android:fontFamily="@font/regular"
+                android:gravity="start"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLength="20"
+                android:padding="16dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:textColorHint="@color/mainBlack30"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_textView" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/remember_me"
+            style="@style/MyCheckboxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:button="@drawable/selector_ic_check_box"
+            android:checked="false"
+            android:fontFamily="@font/regular"
+            android:paddingStart="6dp"
+            android:paddingEnd="2dp"
+            android:text="@string/remember_me"
+            android:textColor="@drawable/selector_cl_remember_me"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/password_text_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/password_text_input_layout" />
+
+        <TextView
+            android:id="@+id/forgot_password_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/regular"
+            android:paddingVertical="5dp"
+            android:text="@string/forgot_password"
+            android:textColor="@color/mainBlack30"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/remember_me"
+            app:layout_constraintEnd_toEndOf="@id/password_text_input_layout"
+            app:layout_constraintTop_toTopOf="@id/remember_me" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/log_in_Button"
+            style="@style/big_button_Style"
+            android:layout_marginTop="24dp"
+            android:text="@string/log_in"
+            android:textColor="@color/whiteText"
+            app:backgroundTint="@null"
+            app:cornerRadius="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/remember_me" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/free_try_Button"
+            style="@style/big_button_Style"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_white_r100_s1_secondary_ripple"
+            android:text="@string/try_for_free"
+            android:textColor="@color/secondaryColor"
+            app:backgroundTint="@null"
+            app:cornerRadius="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/log_in_Button" />
+
+        <TextView
+            android:id="@+id/register_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/regular"
+            android:paddingVertical="5dp"
+            android:text="@string/you_do_not_have_account"
+            android:textColor="@color/mainBlack30"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/free_try_Button" />
+
+        <TextView
+            android:id="@+id/english_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:fontFamily="@font/regular"
+            android:padding="6dp"
+            android:paddingVertical="5dp"
+            android:text="@string/english"
+            android:textColor="@color/mainBlack30"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lang_divider_view"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/register_textView" />
+
+        <View
+            android:id="@+id/lang_divider_view"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="2dp"
+            android:background="@color/stroke60"
+            app:layout_constraintBottom_toBottomOf="@id/english_textView"
+            app:layout_constraintEnd_toStartOf="@id/arabic_textView"
+            app:layout_constraintStart_toEndOf="@id/english_textView"
+            app:layout_constraintTop_toTopOf="@id/english_textView" />
+
+        <TextView
+            android:id="@+id/arabic_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:padding="6dp"
+            android:paddingVertical="5dp"
+            android:text="@string/arabic"
+            android:textColor="@color/primaryColor"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lang_divider_view"
+            app:layout_constraintTop_toTopOf="@id/english_textView" />
+
+        <include
+            android:id="@+id/loading_layout"
+            layout="@layout/layout_loading"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

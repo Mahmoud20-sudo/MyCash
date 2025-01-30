@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_host_navigation"
+    app:startDestination="@id/navigation_profileFragment">
+
+    <fragment
+        android:id="@+id/navigation_profileFragment"
+        android:name="com.codeIn.myCash.ui.options.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_otpUpdateProfile"
+            app:destination="@id/otpUpdateProfile" />
+        <action
+            android:id="@+id/action_profileFragment_to_otpEmailFragment"
+            app:destination="@id/otpEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpUpdateProfile"
+        android:name="com.codeIn.myCash.ui.options.profile.otp_update.OtpUpdatePhoneFragment"
+        android:label="fragment_otp_update_profile"
+        tools:layout="@layout/fragment_otp_update_profile" >
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="newPhone"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpEmailFragment"
+        android:name="com.codeIn.myCash.ui.options.profile.otp_update.OtpEmailFragment"
+        android:label="fragment_otp_email"
+        tools:layout="@layout/fragment_otp_email" >
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="newEmail"
+            app:argType="string" />
+    </fragment>
+</navigation>

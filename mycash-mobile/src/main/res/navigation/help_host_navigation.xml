@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/help_host_navigation"
+    app:startDestination="@id/navigation_helpFragment">
+
+    <fragment
+        android:id="@+id/navigation_helpFragment"
+        android:name="com.codeIn.myCash.ui.options.help.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" >
+        <action
+            android:id="@+id/action_helpFragment_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment" />
+        <action
+            android:id="@+id/action_helpFragment_to_guideWithMyCashFragment"
+            app:destination="@id/guideWithMyCashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.codeIn.myCash.ui.options.help.PrivacyPolicyFragment"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="dec"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/guideWithMyCashFragment"
+        android:name="com.codeIn.myCash.ui.options.help.GuideWithMyCashFragment"
+        android:label="fragment_guide_with_my_cash"
+        tools:layout="@layout/fragment_guide_with_my_cash" />
+</navigation>

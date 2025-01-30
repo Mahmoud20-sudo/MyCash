@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.codeIn.myCash.ui.options.notifications.NotificationsFragment">
+
+
+
+    <include
+        layout="@layout/icon_mada_layout"
+        android:id="@+id/mada_layout"
+        android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/mada_layout">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingVertical="16dp">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:src="@drawable/ic_arrow_left"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/back_arrow" />
+
+            <TextView
+                android:id="@+id/title_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="@string/notifications"
+                android:textColor="@color/mainBlack"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/back_arrow" />
+
+            <LinearLayout
+                android:id="@+id/notifications_filter_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="8dp"
+                android:clickable="false"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/back_arrow">
+
+                <TextView
+                    android:id="@+id/all_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/all"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/unseen_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/unseen"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/notifications_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notifications_filter_layout"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_draft" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33D1D3D4"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp">
+
+            <Switch
+                android:id="@+id/enable_notifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="false"
+                android:text="@string/enable_notifications"
+                android:thumb="@drawable/ic_switch_button"
+                android:track="@drawable/bg_switch_button"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

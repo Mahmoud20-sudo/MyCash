@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/invoices_host_navigation.xml"
+    app:startDestination="@id/navigation_invoicesFragment">
+
+    <fragment
+        android:id="@+id/navigation_invoicesFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.invoices.InvoicesFragment"
+        android:label="fragment_invoices"
+        tools:layout="@layout/fragment_invoices">
+        <action
+            android:id="@+id/action_navigation_invoicesFragment_to_navigation_newInvoiceFragment"
+            app:destination="@id/navigation_newInvoiceFragment"
+            app:enterAnim="@anim/fade_in_with_scale"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_invoicesFragment_to_navigation_invoiceFragment"
+            app:destination="@id/navigation_invoiceFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_invoicesFragment_to_madaTransactionsFragment"
+            app:destination="@id/madaTransactionsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_newInvoiceFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.newInvoice.NewInvoiceFragment"
+        android:label="fragment_new_invoice"
+        tools:layout="@layout/fragment_new_invoice">
+        <action
+            android:id="@+id/action_navigation_newInvoiceFragment_to_navigation_addClientsFragmentForInvoice"
+            app:destination="@id/navigation_addClientsFragmentForInvoice"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_newInvoiceFragment_to_navigation_addProductsFragment"
+            app:destination="@id/navigation_addProductsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_addClientsFragmentForInvoice"
+        android:name="com.codeIn.myCash.ui.home.clients_vendors.add_client.AddClientFragment"
+        android:label="fragment_add_clients"
+        tools:layout="@layout/fragment_add_clients">
+        <argument
+            android:name="type"
+            app:argType="com.codeIn.common.data.ClientsSection" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_addProductsFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.addProducts.AddProductsFragment"
+        android:label="fragment_add_products"
+        tools:layout="@layout/fragment_add_products">
+        <action
+            android:id="@+id/action_navigation_addProductsFragment_to_navigation_newPurchaseInvoiceFragment"
+            app:destination="@id/navigation_newPurchaseInvoiceFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_newPurchaseInvoiceFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.newPurchaseInvoice.NewPurchaseInvoiceFragment"
+        android:label="fragment_new_purchase_invoice"
+        tools:layout="@layout/fragment_new_purchase_invoice">
+        <argument
+            android:name="list"
+            app:argType="java.util.ArrayList" />
+        <action
+            android:id="@+id/action_navigation_newPurchaseInvoiceFragment_to_navigation_newPurchaseInvoicePaymentFragment"
+            app:destination="@id/navigation_newPurchaseInvoicePaymentFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_newPurchaseInvoicePaymentFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.newPurchaseInvoicePayment.NewPurchaseInvoicePaymentFragment"
+        android:label="fragment_new_purchase_invoice_payment"
+        tools:layout="@layout/fragment_new_purchase_invoice_payment">
+        <argument
+            android:name="list"
+            app:argType="java.util.ArrayList" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_invoiceFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.invoice.InvoiceFragment"
+        android:label="fragment_invoice"
+        tools:layout="@layout/fragment_invoice">
+        <argument
+            android:name="invoiceId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_navigation_invoiceFragment_to_navigation_invoiceReturnFragment"
+            app:destination="@id/navigation_invoiceReturnFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_invoiceFragment_to_navigation_incompletePaymentInvoiceFragment"
+            app:destination="@id/navigation_incompletePaymentInvoiceFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_invoiceFragment_to_navigation_creditorDebtorNoteFragment"
+            app:destination="@id/navigation_creditorDebtorNoteFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_invoiceFragment_to_navigation_creditorDebtorNotesFragment"
+            app:destination="@id/navigation_creditorDebtorNotesFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_invoiceReturnFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.invoiceReturn.InvoiceReturnFragment"
+        android:label="fragment_invoice_return"
+        tools:layout="@layout/fragment_invoice_return">
+        <argument
+            android:name="invoice"
+            app:argType="com.codeIn.myCash.features.stock.data.invoice.remote.response.InvoiceModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_incompletePaymentInvoiceFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.incompleteInvoice.IncompletePaymentInvoiceFragment"
+        android:label="fragment_incomplete_payment_invoice"
+        tools:layout="@layout/fragment_incomplete_payment_invoice">
+        <argument
+            android:name="invoice"
+            app:argType="com.codeIn.myCash.features.stock.data.invoice.remote.response.InvoiceModel" />
+        <action
+            android:id="@+id/action_navigation_incompletePaymentInvoiceFragment_to_navigation_payReceiptFragment"
+            app:destination="@id/navigation_payReceiptFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_navigation_incompletePaymentInvoiceFragment_to_seeMoreReceiptsFragment"
+            app:destination="@id/seeMoreReceiptsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_payReceiptFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.payReceipt.PayReceiptFragment"
+        android:label="fragment_pay_receipt"
+        tools:layout="@layout/fragment_pay_receipt">
+        <argument
+            android:name="receipt"
+            app:argType="com.codeIn.myCash.features.stock.data.receipt.remote.response.ReceiptModel"/>
+        <argument
+            android:name="receiptRequest"
+            app:argType="com.codeIn.myCash.features.stock.domain.receipt.model.CurrentReceiptModel"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_creditorDebtorNoteFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.makeMemorandum.MakeMemorandumFragment"
+        android:label="fragment_creditor_debtor_note"
+        tools:layout="@layout/fragment_creditor_debtor_note">
+        <argument
+            android:name="invoice"
+            app:argType="com.codeIn.myCash.features.stock.data.invoice.remote.response.InvoiceModel" />
+
+        <action
+            android:id="@+id/action_navigation_creditorDebtorNoteFragment_to_navigation_addNoticeProductsFragment"
+            app:destination="@id/navigation_addNoticeProductsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_creditorDebtorNoteFragment_to_navigation_invoicePaymentFragment"
+            app:destination="@id/navigation_invoicePaymentFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_addNoticeProductsFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.addMoreProductsToMemorandum.AddMoreProductsToMemorandumFragment"
+        android:label="fragment_add_notice_products"
+        tools:layout="@layout/fragment_add_notice_products" />
+    <fragment
+        android:id="@+id/navigation_invoicePaymentFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.memorandumInvoicePayment.MemorandumInvoicePaymentFragment"
+        android:label="fragment_invoice_payment"
+        tools:layout="@layout/fragment_invoice_payment">
+
+        <argument
+            android:name="products_in_memorandum"
+            app:argType="com.codeIn.myCash.features.stock.domain.memorandum.model.ProductInInvoiceMemorandum" />
+
+        <argument
+            android:name="invoice_id"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_paymentSummaryFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.memorandum.MemorandumFragment"
+        android:label="fragment_payment_summary"
+        tools:layout="@layout/fragment_payment_summary" >
+        <argument
+            android:name="memorandum_id"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_creditorDebtorNotesFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.memorandums.MemorandumsFragment"
+        android:label="fragment_creditor_debtor_notes"
+        tools:layout="@layout/fragment_creditor_debtor_notes" >
+        <argument
+            android:name="invoice_id"
+            app:argType="string"/>
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_navigation_creditorDebtorNotesFragment_to_navigation_paymentSummaryFragment"
+            app:destination="@id/navigation_paymentSummaryFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_see_more_receipts"
+        android:id="@+id/seeMoreReceiptsFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.seeMoreReceipts.SeeMoreReceiptsFragment"
+        android:label="SeeMoreReceiptsFragment" >
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_seeMoreReceiptsFragment_to_navigation_payReceiptFragment"
+            app:destination="@id/navigation_payReceiptFragment" />
+
+        <argument
+            android:name="invoiceId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_show_transactions"
+        android:id="@+id/madaTransactionsFragment"
+        android:name="com.codeIn.myCash.ui.home.invoices.madaTransactions.MadaTransactionsFragment"
+        android:label="MadaTransactionsFragment" />
+</navigation>

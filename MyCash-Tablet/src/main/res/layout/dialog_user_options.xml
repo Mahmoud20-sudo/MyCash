@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginStart="400dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="49dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="24dp">
+
+                <Switch
+                    android:id="@+id/activate_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="false"
+                    android:fontFamily="@font/regular"
+                    android:paddingVertical="12dp"
+                    android:text="@string/activate_user"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="14sp"
+                    android:thumb="@drawable/ic_switch_button"
+                    android:track="@drawable/bg_switch_button"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/edit_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/regular"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:text="@string/edit"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack70"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_edit_svg" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/stroke30" />
+
+        <TextView
+            android:id="@+id/delete_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/regular"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:text="@string/delete"
+            android:drawableTint="@color/mainBlack70"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack70"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_trash_gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/stroke30" />
+
+        <TextView
+            android:id="@+id/share_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/regular"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:text="@string/share"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack70"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_share" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

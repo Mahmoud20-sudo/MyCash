@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.codeIn.myCash.ui.home.invoices.newInvoice.NewInvoiceFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:clickable="false"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/back_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:padding="14dp"
+                    android:contentDescription="@string/content_description_reload_image"
+                    android:focusable="true"
+                    android:paddingVertical="8dp"
+                    android:src="@drawable/ic_arrow_left" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|end"
+                    android:text="@string/new_purchase_invoice"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:fontFamily="@font/regular"
+                android:gravity="center|start"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="11dp"
+                android:text="@string/invoice_details"
+                android:textColor="@color/mainBlack"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <EditText
+                    android:id="@+id/reference_number_editText"
+                    style="@style/main_editText"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    android:drawableStart="@drawable/ic_receipt"
+                    android:hint="@string/reference_invoice_number"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/invoice_issuance_date_editText"
+                    style="@style/main_editText"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    android:hint="@string/invoice_issuance_date"
+                    app:drawableStartCompat="@drawable/ic_calendar" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/vendor_editText"
+                        style="@style/main_editText"
+                        android:layout_marginBottom="8dp"
+                        android:autofillHints="name"
+                        android:hint="@string/vendor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:drawableStartCompat="@drawable/ic_profile" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/add_vendor_imageView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="end"
+                        android:layout_margin="4dp"
+                        android:background="#99D1D3D4"
+                        android:clickable="true"
+                        android:contentDescription="@string/content_description_scanner_image"
+                        android:focusable="true"
+                        android:src="@drawable/ic_add_square"
+                        app:contentPadding="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/vendor_editText"
+                        app:layout_constraintDimensionRatio="H,1.0:1.0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/vendor_editText"
+                        app:shapeAppearance="@style/scannerCircleImageView" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <EditText
+                    android:id="@+id/notes_editText"
+                    style="@style/main_editText"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    android:drawableStart="@drawable/ic_note_text"
+                    android:hint="@string/notes"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/extra_info_editText"
+                    style="@style/main_editText"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    android:drawableStart="@drawable/ic_message_add"
+                    android:hint="@string/extra_info"
+                    android:inputType="text" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/proceed_Button"
+            style="@style/big_button_Style"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="@string/proceed"
+            app:backgroundTint="@null" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_Button"
+            style="@style/big_button_Style_secondary"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            app:backgroundTint="@null"
+            app:iconPadding="10dp"
+            app:iconTint="@color/primaryColor" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

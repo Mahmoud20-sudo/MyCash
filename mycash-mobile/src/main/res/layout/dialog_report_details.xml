@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginStart="49dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="49dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="12dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/print_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/regular"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:text="@string/print"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack70"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_printer" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/stroke30" />
+
+        <TextView
+            android:id="@+id/download_pdf_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/regular"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:text="@string/pdf_download"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack70"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_document_download" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/stroke30" />
+
+        <TextView
+            android:id="@+id/share_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/regular"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:text="@string/share"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack70"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_share" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

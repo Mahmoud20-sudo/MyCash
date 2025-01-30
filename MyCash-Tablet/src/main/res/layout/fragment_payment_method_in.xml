@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:scrollbarSize="1px"
+    android:scrollbars="vertical"
+    android:scrollbarThumbVertical="@drawable/scroll_bar"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.codeIn.myCash.ui.authentication.sign_up.payment_method.PaymentMethodFragment">
+
+    <include
+        layout="@layout/icon_mada_layout"
+        android:id="@+id/mada_layout"
+        android:layout_alignParentStart="true"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@id/mada_layout"
+        android:layout_gravity="center|top"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="14dp"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintBottom_toBottomOf="@id/help_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/help_button"
+            android:contentDescription="@string/content_description_back_arrow"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/help_button"
+            style="@style/big_button_Style"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/bg_transparent_r100_s1_white_ripple"
+            android:drawableEnd="@drawable/ic_headphone"
+            android:text="@string/help"
+            android:textColor="@color/mainBlack30"
+            android:textSize="12sp"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="32dp"
+            android:animateLayoutChanges="true"
+            android:gravity="center|start"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back_arrow">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/regular"
+                android:text="@string/payment_method"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:layout_marginTop="72dp"
+                android:textSize="24sp"
+                app:drawableStartCompat="@drawable/ic_primary_color_dot" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="50dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/total"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/initial_total_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:lines="1"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/discount"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/discount_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:lines="1"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/discount_coupon"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/discount_coupon_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:lines="1"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/total"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/total_price_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:lines="1"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/save_with_my_cash"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/mainBlack40"
+                    android:textSize="14sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp">
+
+                    <EditText
+                        android:id="@+id/coupon_code_textView"
+                        style="@style/main_editText"
+                        android:autofillHints="name"
+                        android:hint="@string/coupon_code"
+                        android:inputType="textNoSuggestions"
+                        app:drawableStartCompat="@drawable/ic_ticket_discount" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/apply_coupon_button"
+                        style="@style/big_button_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apply"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/secondaryColor"
+                        android:layout_marginEnd="1dp"
+                        android:textSize="12sp"
+                        android:layout_gravity="end|center_vertical"
+                        app:backgroundTint="@null"/>
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next_Button"
+                style="@style/big_button_Style"
+                android:layout_width="match_parent"
+                android:layout_marginTop="24dp"
+                android:text="@string/proceed_and_pay"
+                app:backgroundTint="@null" />
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/loading_layout"
+            layout="@layout/layout_loading"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

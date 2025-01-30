@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="595dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layoutDirection="ltr"
+    android:minHeight="842dp"
+    android:paddingHorizontal="40dp"
+    android:paddingTop="40dp"
+    android:paddingBottom="24dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/content_description_my_cash_logo"
+        android:src="@drawable/ic_pdf_logo"
+        app:layout_constraintBottom_toBottomOf="@id/qr_code1_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/qr_code1_imageView" />
+
+    <ImageView
+        android:id="@+id/qr_code1_imageView"
+        android:layout_width="81dp"
+        android:layout_height="81dp"
+        android:contentDescription="@string/content_description_qr_code"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_ar_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/semi_bold"
+        android:text="@string/simplified_tax_invoice_ar"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/title_en_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/qr_code1_imageView" />
+
+    <TextView
+        android:id="@+id/title_en_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="@string/simplified_tax_invoice_en"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/qr_code1_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_ar_textView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical"
+        android:paddingBottom="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_en_textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="650dp"
+            android:orientation="vertical">
+
+            <include
+                android:visibility="gone"
+                android:id="@+id/invoice_information"
+                layout="@layout/pdf_invoice_information" />
+
+            <include
+                android:visibility="gone"
+                android:id="@+id/seller_information"
+                layout="@layout/pdf_seller_information" />
+
+            <include
+                android:id="@+id/product_details"
+                layout="@layout/pdf_product_details" />
+
+            <include
+                android:id="@+id/invoice_summary"
+                layout="@layout/pdf_invoice_summary" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/regular"
+            android:text="@string/pdf_ending_info_ar"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:fontFamily="@font/semi_bold"
+            android:text="@string/pdf_ending_info_en"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

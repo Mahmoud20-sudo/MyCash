@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dateFromTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bill_regular"
+        android:text="@string/date_from"
+        android:textColor="@color/grayishBlue"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintEnd_toEndOf="@+id/dateFromEt"
+        app:layout_constraintStart_toStartOf="@+id/dateFromEt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dateToTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/bill_regular"
+        android:text="@string/date_to"
+        android:textColor="@color/grayishBlue"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/dateFromTv"
+        app:layout_constraintEnd_toEndOf="@+id/dateToEt"
+        app:layout_constraintStart_toStartOf="@+id/dateToEt"
+        app:layout_constraintTop_toTopOf="@+id/dateFromTv" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/dateFromEt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_41sdp"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:background="@drawable/bg_main_balck40_r50_s1"
+        android:drawableEnd="@drawable/ic_calendar_search"
+        android:hint="@string/hint_date"
+        android:textSize="@dimen/_12sdp"
+        android:focusable="false"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toStartOf="@+id/dateToEt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateFromTv" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/dateToEt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:enabled="false"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:background="@drawable/bg_main_balck40_r50_s1"
+        android:drawableEnd="@drawable/ic_calendar_search"
+        android:hint="@string/hint_date"
+        app:layout_goneMarginEnd="@dimen/_17sdp"
+        android:textSize="@dimen/_12sdp"
+        android:singleLine="true"
+        android:focusable="false"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="@+id/dateFromEt"
+        app:layout_constraintEnd_toStartOf="@+id/filterIv"
+        app:layout_constraintStart_toEndOf="@+id/dateFromEt"
+        app:layout_constraintTop_toTopOf="@+id/dateFromEt"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/filterIv"
+        android:layout_width="@dimen/_41sdp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/dateToEt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dateToEt"
+        app:layout_constraintTop_toTopOf="@+id/dateToEt"
+        app:srcCompat="@drawable/ic_filter"
+        tools:ignore="RtlSymmetry" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:background="@color/mainBlack5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateFromEt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#ffffff</color>
+    <color name="white">#2D2D2D</color>
+    <color name="whiteText">#FFFFFFFF</color>
+
+    <color name="my_transparent_color">#00FFFFFF</color>
+
+    <color name="primaryColor">#232773</color>
+    <color name="primaryColorDark">#17194C</color>
+    <color name="primaryColor60">#99232773</color>
+
+    <color name="secondaryColor">#6EC531</color>
+    <color name="secondaryColorDark">#457A1B</color>
+    <color name="secondaryColor60">#996EC531</color>
+    <color name="secondaryColor40">#666EC531</color>
+    <color name="green">#6EC531</color>
+
+    <color name="gray">#FFFFFF</color>
+    <color name="textColor">#99FFFFFF</color>
+    <color name="stroke">#FFFFFF</color>
+    <color name="stroke20">#33FFFFFF</color>
+    <color name="stroke30">#4DFFFFFF</color>
+    <color name="stroke60">#99FFFFFF</color>
+
+    <color name="mainBlack">#FFFFFF</color>
+    <color name="mainBlack5">#2D2D2D</color>
+    <color name="mainBlack10">#FFFFFF</color>
+    <color name="mainBlack15">#FFFFFF</color>
+    <color name="mainBlack30">#FFFFFF</color>
+    <color name="mainBlack40">#FFFFFF</color>
+    <color name="mainBlack60">#FFFFFF</color>
+    <color name="mainBlack70">#FFFFFF</color>
+    <color name="mainBlack80">#FFFFFF</color>
+
+    <color name="error">#FF4B6B</color>
+    <color name="error_ff">#FF9999</color>
+    <color name="gold">#F2AE14</color>
+
+    <color name="sunsetOrange">#EE9F2D</color>
+    <color name="invoiceBackground">#E62D2D2D</color>
+    <color name="red">#FF0000</color>
+
+    <color name="check">#FFFFFF</color>
+    <color name="greenB8E">#B8E0B9</color>
+
+    <color name="success300">#94D196</color>
+    <color name="warning300">#FFD966</color>
+    <color name="error300">#FF6666</color>
+</resources>

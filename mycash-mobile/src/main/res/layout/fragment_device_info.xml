@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingVertical="16dp"
+    tools:context="com.codeIn.myCash.ui.options.settings.settings.SettingsFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/back_arrow" />
+
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/semi_bold"
+            android:text="@string/device_info"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back_arrow" />
+
+        <androidx.core.widget.NestedScrollView
+            android:scrollbarSize="1px"
+            android:scrollbarThumbVertical="@drawable/scroll_bar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="11dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back_arrow">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:paddingTop="4dp"
+                    android:id="@+id/deviceImage"
+                    android:paddingBottom="4dp"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/round_twenty_button_active"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="32dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_gravity="center|start"
+                        android:text="@string/device_brand"
+                        android:textColor="@color/textColor"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/regular"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/deviceBrand"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/mainBlack"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_button_fourty"
+                        android:dropDownHeight="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:textAlignment="viewStart"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="8dp"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_gravity="center|start"
+                        android:text="@string/device_name"
+                        android:textColor="@color/textColor"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/regular"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/deviceName"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/mainBlack"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/round_button_fourty"
+                        android:dropDownHeight="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="8dp"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_gravity="center|start"
+                        android:text="@string/device_features"
+                        android:textColor="@color/textColor"
+                        android:textSize="12sp"
+                        android:id="@+id/featuresView"
+                        android:fontFamily="@font/regular"
+                        android:singleLine="true" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/features"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:orientation="vertical"
+                        android:overScrollMode="never"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_device_feature"
+                        tools:itemCount="3" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

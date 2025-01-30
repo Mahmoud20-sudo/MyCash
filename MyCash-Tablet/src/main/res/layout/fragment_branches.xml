@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.codeIn.myCash.ui.options.branches.branches.BranchesFragment">
+
+
+
+    <include
+        layout="@layout/icon_mada_layout"
+        android:id="@+id/mada_layout"
+        android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@id/mada_layout"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/content_description_back_arrow"
+                android:focusable="true"
+                android:padding="14dp"
+                android:src="@drawable/ic_arrow_left"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="@string/branches"
+                android:textColor="@color/mainBlack"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/back_arrow" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_s1_main_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/log_out_imageView">
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="0dp"
+                android:layout_height="41dp"
+                android:layout_weight=".55"
+                android:iconifiedByDefault="false"
+                android:queryBackground="@null"
+                android:queryHint="@string/search_with_name_or_phone"
+                android:searchIcon="@drawable/ic_search_normal"
+                android:textAlignment="viewStart"
+                android:theme="@style/SearchViewStyle" />
+
+            <ImageView
+                android:id="@+id/refresh_btn"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:contentDescription="@string/content_description_reload_image"
+                android:focusable="true"
+                android:paddingVertical="8dp"
+                android:src="@drawable/ic_reload" />
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:contentDescription="@string/content_description_settings_image"
+                android:focusable="true"
+                android:paddingVertical="8dp"
+                android:src="@drawable/ic_setting" />
+
+            <ImageView
+                android:id="@+id/add_branch"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:contentDescription="@string/content_description_add_client"
+                android:focusable="true"
+                android:paddingVertical="8dp"
+                android:src="@drawable/ic_add_square" />
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/branches_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_branch" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/delete_Button"
+                style="@style/big_button_Style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_transparent_r100_s1_white_ripple"
+                android:paddingHorizontal="100dp"
+                android:text="@string/delete_all"
+                android:textColor="@color/error"
+                app:backgroundTint="@null"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_trash_gray"
+                app:iconGravity="textStart"
+                app:iconTint="@color/error" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginHorizontal="4dp"-->
+    <!--        android:layout_margin="16dp"-->
+    <!--        app:cardCornerRadius="12dp">-->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:paddingBottom="16dp">-->
+
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:cardCornerRadius="12dp"-->
+    <!--            app:cardElevation="8dp">-->
+
+    <!--            <FrameLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:background="@color/white"-->
+    <!--                android:paddingHorizontal="24dp"-->
+    <!--                android:paddingVertical="8dp">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:drawablePadding="8dp"-->
+    <!--                    android:fontFamily="@font/regular"-->
+    <!--                    android:text="@string/current_branch"-->
+    <!--                    android:textAlignment="viewStart"-->
+    <!--                    android:textColor="@color/mainBlack60"-->
+    <!--                    android:textSize="14sp"-->
+    <!--                    app:drawableStartCompat="@drawable/ic_shop" />-->
+    <!--            </FrameLayout>-->
+    <!--        </androidx.cardview.widget.CardView>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:paddingHorizontal="24dp">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/current_branch_name_textView"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:lines="1"-->
+    <!--                android:fontFamily="@font/regular"-->
+    <!--                android:textAlignment="viewStart"-->
+    <!--                android:textColor="@color/mainBlack"-->
+    <!--                android:textSize="11sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/current_branch_active_status_textView"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:fontFamily="@font/regular"-->
+    <!--                android:lines="1"-->
+    <!--                android:textAlignment="viewEnd"-->
+    <!--                android:textColor="@color/primaryColor"-->
+    <!--                android:textSize="11sp" />-->
+    <!--        </LinearLayout>-->
+
+
+    <!--    </LinearLayout>-->
+    <!--    </androidx.cardview.widget.CardView>-->
+
+
+
+</RelativeLayout>

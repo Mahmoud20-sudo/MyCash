@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginStart="400dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="49dp"
+    android:background="@drawable/bg_white_r12_s1_stroke60"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="17dp"
+        android:fontFamily="@font/regular"
+        android:text="@string/add_client"
+        android:textAlignment="center"
+        android:textColor="@color/mainBlack"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#99E8E8E8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="37dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/sub_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:fontFamily="@font/regular"
+            android:text="@string/client_info"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack80"
+            android:textSize="14sp" />
+
+        <AutoCompleteTextView
+            android:dropDownVerticalOffset="8dp"
+            android:id="@+id/phone_number_editText"
+            style="@style/main_editText"
+            android:layout_marginVertical="6dp"
+            android:autofillHints="phone"
+            android:imeOptions="actionSearch"
+            android:completionThreshold="1"
+            android:drawableStart="@drawable/ic_mobile"
+            android:hint="@string/phone_number"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/client_name_editText"
+            style="@style/main_editText"
+            android:layout_marginBottom="6dp"
+            android:autofillHints="name"
+            android:drawableStart="@drawable/ic_profile"
+            android:hint="@string/client_name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/email_editText"
+            style="@style/main_editText"
+            android:layout_marginVertical="6dp"
+            android:autofillHints="phone"
+            android:drawableStart="@drawable/ic_sms"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/tax_number_editText"
+            style="@style/main_editText"
+            android:layout_marginVertical="6dp"
+            android:autofillHints="emailAddress"
+            android:drawableStart="@drawable/ic_shield_security20"
+            android:hint="@string/tax_number2"
+            android:inputType="number" />
+
+
+        <EditText
+            android:id="@+id/commercial_register_editText"
+            style="@style/main_editText"
+            android:layout_marginVertical="6dp"
+            android:autofillHints="emailAddress"
+            android:drawableStart="@drawable/ic_document20"
+            android:hint="@string/commercial_register"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/address_editText"
+            style="@style/main_editText"
+            android:layout_marginVertical="6dp"
+            android:autofillHints="name"
+            android:drawableStart="@drawable/ic_location20"
+            android:hint="@string/address"
+            android:inputType="text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_Button"
+            style="@style/big_button_Style"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_white_r100_s1_primary_ripple"
+            android:fontFamily="@font/semi_bold"
+            android:paddingHorizontal="37dp"
+            android:text="@string/add"
+            android:textColor="@color/primaryColor"
+            app:backgroundTint="@null"
+            app:cornerRadius="100dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

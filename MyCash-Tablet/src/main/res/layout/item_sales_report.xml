@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@drawable/bg_white_r12_s1_stroke60_ripple"
+    android:orientation="horizontal"
+    android:padding="22dp">
+
+    <TextView
+        android:id="@+id/title_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/semi_bold"
+        android:shadowColor="#99E8E8E8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="1.6"
+        android:textAlignment="viewStart"
+        android:textColor="@color/mainBlack40"
+        android:textSize="16sp"
+        tools:text="اليوم" />
+
+    <TextView
+        android:id="@+id/value_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/semi_bold"
+        android:shadowColor="#99E8E8E8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="1.6"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/mainBlack"
+        android:textSize="18sp"
+        tools:text="2000" />
+
+
+</LinearLayout>

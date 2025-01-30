@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.codeIn.myCash.ui.home.invoices.addProducts.AddProductsFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="false"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:contentDescription="@string/content_description_reload_image"
+                android:focusable="true"
+                android:padding="14dp"
+                android:paddingVertical="8dp"
+                android:src="@drawable/ic_arrow_left" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:fontFamily="@font/regular"
+                android:gravity="center|end"
+                android:text="@string/new_purchase_invoice"
+                android:textColor="@color/mainBlack"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:fontFamily="@font/regular"
+            android:gravity="center|start"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="11dp"
+            android:text="@string/add_your_products"
+            android:textColor="@color/mainBlack"
+            android:textSize="14sp" />
+
+        <include android:layout_marginTop="-40dp"
+            android:id="@+id/products_fragment" layout="@layout/fragment_products"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/proceed_Button"
+            style="@style/big_button_Style"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="@string/add_and_proceed"
+            app:backgroundTint="@null"
+            app:cornerRadius="100dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_Button"
+            style="@style/big_button_Style_secondary"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            app:backgroundTint="@null"
+            app:cornerRadius="100dp"
+            app:iconPadding="10dp"
+            app:iconTint="@color/primaryColor" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_host_navigation.xml"
+    app:startDestination="@id/navigation_settingsFragment">
+
+    <fragment
+        android:id="@+id/navigation_settingsFragment"
+        android:name="com.codeIn.myCash.ui.options.settings.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_navigation_settingsFragment_to_navigation_invoiceSettingsFragment"
+            app:destination="@id/navigation_invoiceSettingsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_settingsFragment_to_deviceInfoFragment"
+            app:destination="@id/deviceInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_invoiceSettingsFragment"
+        android:name="com.codeIn.myCash.ui.options.settings.invoice_settings.InvoiceSettingsFragment"
+        android:label="fragment_invoice_settings"
+        tools:layout="@layout/fragment_invoice_settings" />
+    <fragment
+        tools:layout="@layout/fragment_device_info"
+        android:id="@+id/deviceInfoFragment"
+        android:name="com.codeIn.myCash.ui.options.settings.device_info.DeviceInfoFragment"
+        android:label="DeviceInfoFragment" />
+</navigation>

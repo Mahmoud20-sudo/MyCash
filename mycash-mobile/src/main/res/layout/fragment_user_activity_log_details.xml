@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.codeIn.myCash.ui.options.users.activities_log_details.UserActivityLogDetailsFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/back_arrow"
+            style="@style/back_arrow"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/content_description_back_arrow"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintBottom_toBottomOf="@id/title_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/regular"
+            android:text="@string/user_activities_logs"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back_arrow" />
+
+        <LinearLayout
+            android:id="@+id/date_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_s1_main_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/back_arrow">
+
+            <ImageView
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:contentDescription="@string/content_description_reload_image"
+                android:focusable="true"
+                android:paddingVertical="8dp"
+                android:src="@drawable/ic_reload" />
+
+            <EditText
+                android:id="@+id/date_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="username"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="8dp"
+                android:focusable="false"
+                android:fontFamily="@font/regular"
+                android:hint="@string/date_hint"
+                android:inputType="date"
+                android:lines="1"
+                android:paddingHorizontal="16dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:textColorHint="@color/mainBlack30"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/title_textView"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="37dp"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_linear_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/bg_white_r12_s1_stroke60_ripple"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:id="@+id/name_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/semi_bold"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="14sp"
+                        tools:text="@string/user_activities" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:text="@string/date"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/ic_calendar" />
+
+                        <TextView
+                            android:id="@+id/date_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            tools:text="@string/date" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:text="@string/branch"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/ic_shop" />
+
+                        <TextView
+                            android:id="@+id/branch_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            tools:text="@string/branch" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:text="@string/total_sales"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/ic_money_send" />
+
+                        <TextView
+                            android:id="@+id/total_sales_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            tools:text="@string/total_sales" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/bg_white_r12_s1_stroke60_ripple"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/semi_bold"
+                        android:text="@string/working_day_beginning"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:text="@string/time"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/ic_clock20"
+                            app:drawableTint="@color/secondaryColor" />
+
+                        <TextView
+                            android:id="@+id/beginning_date_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            tools:text="@string/date" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:text="@string/cash"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/ic_wallet_money" />
+
+                        <TextView
+                            android:id="@+id/beginning_cash_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            tools:text="@string/branch" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:text="@string/credit_card"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/ic_card" />
+
+                        <TextView
+                            android:id="@+id/beginning_credit_card_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            tools:text="@string/total_sales" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/bg_white_r12_s1_stroke60_ripple"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/semi_bold"
+                        android:text="@string/working_day_end"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/error"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:text="@string/time"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/ic_clock20"
+                            app:drawableTint="@color/error" />
+
+                        <TextView
+                            android:id="@+id/ending_date_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            tools:text="@string/date" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:text="@string/cash"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/ic_wallet_money" />
+
+                        <TextView
+                            android:id="@+id/ending_cash_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            tools:text="@string/branch" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:text="@string/credit_card"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/ic_card" />
+
+                        <TextView
+                            android:id="@+id/ending_credit_card_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/regular"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack60"
+                            android:textSize="12sp"
+                            tools:text="@string/total_sales" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/bg_primary_r12_ripple"
+                    android:orientation="horizontal"
+                    android:padding="22dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:shadowColor="#99E8E8E8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="1.6"
+                        android:text="@string/total_sales"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/total_sales_textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center|end"
+                        android:shadowColor="#99E8E8E8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="1.6"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        tools:text="2000" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

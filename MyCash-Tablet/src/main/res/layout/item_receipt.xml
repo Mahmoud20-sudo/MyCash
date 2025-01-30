@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/bg_white_s1_main_ripple"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_s1_main_ripple"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="1dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="18dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/regular"
+                    android:lines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="14sp"
+                    android:text="@string/receipt"
+                    app:drawableStartCompat="@drawable/ic_receipt3" />
+
+                <TextView
+                    android:id="@+id/receipt_number_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:fontFamily="@font/semi_bold"
+                    android:lines="1"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="14sp"
+                    tools:text="#01" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/regular"
+                android:paddingVertical="8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack60"
+                android:textSize="11sp"
+                android:text="@string/invoice_number"/>
+
+            <TextView
+                android:id="@+id/invoice_number_textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/regular"
+                android:lines="1"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                tools:text="#01"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/mainBlack60"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/regular"
+                android:paddingVertical="8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack60"
+                android:textSize="11sp"
+                android:text="@string/payment_date"/>
+
+            <TextView
+                android:id="@+id/payment_date_textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/regular"
+                android:lines="1"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                tools:text="21/08/2021/2"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/mainBlack60"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#99E8E8E8" />
+
+        <LinearLayout
+            android:id="@+id/receipt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_s1_main_ripple"
+            android:clickable="false"
+            android:elevation="2dp"
+            android:focusable="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/receipt_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/semi_bold"
+                android:lines="1"
+                android:drawableTint="@color/mainBlack"
+                android:backgroundTint="@color/mainBlack"
+                android:paddingVertical="8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_receipt_2"
+               />
+
+            <TextView
+                android:id="@+id/pay_receipt_textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/regular"
+                android:lines="1"
+                android:visibility="gone"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                android:text="@string/pay_receipt"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/whiteText"
+                android:textSize="12sp"
+                app:drawableEndCompat="@drawable/ic_arrow_circle"
+                app:drawableTint="@color/whiteText" />
+
+            <TextView
+                android:id="@+id/payment_done_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/semi_bold"
+                android:gravity="end|center"
+                android:visibility="gone"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/primaryColor"
+                android:textSize="12sp"
+                app:drawableTint="@color/primaryColor"
+                android:text="@string/payment_done"
+                app:drawableStartCompat="@drawable/ic_tick_circle_small" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

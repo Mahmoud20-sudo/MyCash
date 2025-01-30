@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginStart="49dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="49dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <TextView
+                style="@style/settings_text_item"
+                android:padding="16dp"
+                android:text="@string/specify_amount"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack60"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_card_tick" />
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/amount_editText"
+            style="@style/main_editText"
+            android:layout_marginVertical="16dp"
+            android:autofillHints="name"
+            android:drawableStart="@drawable/ic_card_tick"
+            android:hint="@string/price"
+            android:layout_marginHorizontal="16dp"
+            android:inputType="numberDecimal" />
+
+        <LinearLayout
+            android:id="@+id/buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continue_Button"
+                style="@style/big_button_Style"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/continue_1"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_Button"
+                style="@style/big_button_Style_secondary"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

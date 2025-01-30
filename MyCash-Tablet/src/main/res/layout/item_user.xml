@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/bg_white_s1_main_ripple"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_s1_main_ripple"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/regular"
+                android:lines="1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_tag_user20"
+                tools:text="سعود الغمري " />
+
+
+            <ImageView
+                android:id="@+id/more_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/content_description_item_type_image"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="4dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_more"
+                app:tint="@color/mainBlack" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/email_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/regular"
+            android:lines="1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack60"
+            android:textSize="12sp"
+            tools:text="saud@example.com" />
+
+        <TextView
+            android:id="@+id/phone_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/regular"
+            android:lines="1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack"
+            android:textSize="11sp"
+            tools:text="59156560" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#99E8E8E8" />
+
+
+        <TextView
+            android:id="@+id/branches_textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_white_s1_main_ripple"
+            android:clickable="false"
+            android:drawablePadding="8dp"
+            android:elevation="2dp"
+            android:focusable="false"
+            android:fontFamily="@font/regular"
+            android:gravity="center|start"
+            android:textAlignment="viewStart"
+            android:lines="1"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:textColor="@color/mainBlack"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_shop"
+            app:drawableTint="@color/secondaryColor"
+            tools:text="22 sar" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

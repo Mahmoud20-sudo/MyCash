@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/bg_pdf_section"
+    android:orientation="vertical"
+    android:paddingHorizontal="1dp"
+    tools:showIn="@layout/pdf_tax_bill">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="@string/product_details"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/pdf_table_text"
+            android:layout_weight="29"
+            android:text="@string/pdf_sub_text_description_n" />
+
+        <TextView
+            style="@style/pdf_table_text"
+            android:layout_weight="30"
+            android:text="@string/pdf_sub_text_unit_price_n" />
+
+        <TextView
+            style="@style/pdf_table_text"
+            android:layout_weight="30"
+            android:text="@string/pdf_sub_text_quantity_n" />
+
+        <TextView
+            style="@style/pdf_table_text"
+            android:layout_weight="30"
+            android:text="@string/pdf_sub_text_discount_n" />
+
+        <TextView
+            style="@style/pdf_table_text"
+            android:layout_weight="28"
+            android:text="@string/pdf_sub_text_total_before_vat_n" />
+
+        <TextView
+            style="@style/pdf_table_text"
+            android:layout_weight="30"
+            android:text="@string/pdf_sub_text_vat_n" />
+
+        <TextView
+            style="@style/pdf_table_text"
+            android:layout_weight="30"
+            android:text="@string/pdf_sub_text_vat_amount_n" />
+
+        <TextView
+            style="@style/pdf_table_text"
+            android:layout_weight="28"
+            android:text="@string/pdf_sub_text_total_including_vat_n" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_details_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="14"
+        tools:listitem="@layout/item_pdf_product_details" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/pdf_sub_text"
+            android:layout_weight="29"
+            android:background="#0F404041"
+            android:paddingHorizontal="8dp"
+            android:gravity="center"
+            android:paddingVertical="9dp"
+            android:text="@string/pdf_sub_text_total"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/unit_price_total_textView"
+            style="@style/pdf_sub_text"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="30"
+            android:background="#0F404041"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/quantity_total_textView"
+            style="@style/pdf_sub_text"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:background="@drawable/bg_pdf_table"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/discount_total_textView"
+            style="@style/pdf_sub_text"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="30"
+            android:background="@drawable/bg_pdf_table"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/total_before_vat_total_textView"
+            style="@style/pdf_sub_text"
+            android:layout_height="match_parent"
+            android:layout_weight="28"
+            android:background="@drawable/bg_pdf_table"
+            android:gravity="center"
+            android:text="0.0"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/vat_total_textView"
+            style="@style/pdf_sub_text"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="30"
+            android:background="@drawable/bg_pdf_table"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/vat_amount_total_textView"
+            style="@style/pdf_sub_text"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:background="@drawable/bg_pdf_table"
+            android:gravity="center"
+            android:text="0.0"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/total_including_vat_total_textView"
+            style="@style/pdf_sub_text"
+            android:layout_height="match_parent"
+            android:layout_weight="28"
+            android:background="@drawable/bg_pdf_table"
+            android:gravity="center"
+            android:text="0.0"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

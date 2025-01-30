@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@color/white"
+    tools:context="com.codeIn.myCash.ui.home.reports.reportsFragment.ReportsFragment">
+
+
+    <include
+        layout="@layout/icon_mada_layout"
+        android:id="@+id/mada_layout"
+        android:layout_alignParentStart="true"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:scrollbarSize="1px"
+        android:scrollbars="vertical"
+        android:scrollbarThumbVertical="@drawable/scroll_bar"
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@id/mada_layout"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/bg_white_s1_main_ripple"
+            android:orientation="vertical"
+            android:padding=".5dp">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/add_branch"
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="true"
+                    android:contentDescription="@string/content_description_add_client"
+                    android:focusable="true"
+                    android:paddingVertical="8dp"
+                    android:src="@drawable/ic_add_square" />
+                <ImageView
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="true"
+                    android:contentDescription="@string/content_description_reload_image"
+                    android:focusable="true"
+                    android:paddingVertical="8dp"
+                    android:src="@drawable/ic_reload" />
+
+                <EditText
+                    android:id="@+id/date_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="username"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:drawablePadding="8dp"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:fontFamily="@font/regular"
+                    android:hint="@string/date_hint"
+                    android:inputType="date"
+                    android:lines="1"
+                    android:paddingHorizontal="16dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack30"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/title_textView" />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/add_inventory_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/add_inventory"
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="true"
+                    android:contentDescription="@string/content_description_add_client"
+                    android:focusable="true"
+                    android:paddingVertical="8dp"
+                    android:src="@drawable/ic_add_square" />
+                <ImageView
+                    android:layout_toEndOf="@id/add_inventory"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/refresh_inventory"
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="true"
+                    android:contentDescription="@string/content_description_reload_image"
+                    android:focusable="true"
+                    android:paddingVertical="8dp"
+                    android:src="@drawable/ic_reload" />
+
+                <LinearLayout
+                    android:layout_toEndOf="@id/refresh_inventory"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:layout_weight="1"
+                        android:id="@+id/date_inventory_from_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autofillHints="username"
+                        android:background="@drawable/bg_white_s1_main_ripple"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawablePadding="8dp"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/date_hint_from"
+                        android:inputType="date"
+                        android:lines="1"
+                        android:paddingHorizontal="16dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mainBlack"
+                        android:textColorHint="@color/mainBlack30"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@+id/title_textView" />
+
+                    <EditText
+                        android:layout_weight="1"
+                        android:id="@+id/date_inventory_to_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autofillHints="username"
+                        android:background="@drawable/bg_white_s1_main_ripple"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawablePadding="8dp"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/date_hint_to"
+                        android:inputType="date"
+                        android:lines="1"
+                        android:paddingHorizontal="16dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mainBlack"
+                        android:textColorHint="@color/mainBlack30"
+                        android:textSize="12sp"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/title_textView" />
+                </LinearLayout>
+
+                <AutoCompleteTextView
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/autoComplete_tax"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    android:text="@string/taxable"
+                    />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="false"
+                    android:orientation="horizontal"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:id="@+id/sales_reports_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:text="@string/sales_reports"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_box" />
+
+                    <TextView
+                        android:id="@+id/products_reports_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:text="@string/products_reports"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_bag" />
+
+                    <TextView
+                        android:id="@+id/purchase_reports_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:text="@string/product_inventory_reports"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_shopping_cart" />
+
+                    <TextView
+                        android:id="@+id/tax_reports_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:text="@string/tax_reports"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_percentage_circle" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="false"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="14sp"
+                    tools:text="@string/sales_reports" />
+
+                <TextView
+                    android:id="@+id/count_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="14sp"
+                    tools:text="(100)" />
+
+                <TextView
+                    android:id="@+id/show_all_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:paddingHorizontal="24dp"
+                    android:text="@string/show_all"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inventory_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/semi_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/inventory"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:drawableStartCompat="@drawable/ic_add_square" />
+
+                <View
+                    android:layout_width=".5dp"
+                    android:layout_height="match_parent"
+                    android:background="#99E8E8E8" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:clickable="false"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/today_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"
+                            android:paddingHorizontal="24dp"
+                            android:text="@string/today"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/weekly_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"
+                            android:paddingHorizontal="24dp"
+                            android:text="@string/weekly"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/monthly_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"
+                            android:paddingHorizontal="24dp"
+                            android:text="@string/monthly"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/annually_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"
+                            android:paddingHorizontal="24dp"
+                            android:text="@string/annually"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="visible"
+                android:id="@+id/inventory_report_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_inventory_report" />
+
+            <include
+                android:id="@+id/sales_reports_layout"
+                layout="@layout/layout_sales_reports"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/products_reports_layout"
+                layout="@layout/layout_products_reports"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/purchase_reports_layout"
+                layout="@layout/layout_sales_reports"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/tax_reports_layout"
+                layout="@layout/layout_products_reports"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

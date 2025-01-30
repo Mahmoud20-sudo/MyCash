@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutCustomNavDrawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_imageView"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="2dp"
+            android:background="#99D1D3D4"
+            android:contentDescription="@string/content_description_user_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_images_placeholder"
+            app:shapeAppearance="@style/scannerCircleImageView" />
+
+
+        <TextView
+            android:id="@+id/store_name_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="2dp"
+            android:fontFamily="@font/semi_bold"
+            android:lines="1"
+            android:text="@string/app_name"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tax_number_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="2dp"
+            android:fontFamily="@font/regular"
+            android:lines="1"
+            android:text="@string/tax_number"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack70"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:layout_marginTop="29dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_toEndOf="@id/notifications_textView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="gone"
+                android:layout_marginStart="-64dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/soon" />
+            <TextView
+                android:id="@+id/notifications_textView"
+                style="@style/drawer_item_style"
+                android:text="@string/notifications"
+                app:drawableStartCompat="@drawable/ic_notification"
+                app:drawableTint="@drawable/selector_cl_nav_tab_tint" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/users_textView"
+            style="@style/drawer_item_style"
+            android:text="@string/_users"
+            app:drawableStartCompat="@drawable/ic_profile_2user"
+            app:drawableTint="@drawable/selector_cl_nav_tab_tint" />
+
+        <TextView
+            android:id="@+id/subscriptions_textView"
+            style="@style/drawer_item_style"
+            android:text="@string/subscriptions"
+            app:drawableStartCompat="@drawable/ic_medal"
+            app:drawableTint="@drawable/selector_cl_nav_tab_tint" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_toEndOf="@id/drafts_textView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="gone"
+                android:layout_marginStart="-64dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/soon" />
+            <TextView
+                android:id="@+id/drafts_textView"
+                style="@style/drawer_item_style"
+                android:text="@string/drafts"
+                app:drawableStartCompat="@drawable/ic_bill"
+                app:drawableTint="@drawable/selector_cl_nav_tab_tint" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/branches_textView"
+            style="@style/drawer_item_style"
+            android:text="@string/branches"
+            app:drawableStartCompat="@drawable/ic_shop"
+            app:drawableTint="@drawable/selector_cl_nav_tab_tint" />
+
+        <TextView
+            android:id="@+id/help_textView"
+            style="@style/drawer_item_style"
+            android:text="@string/help"
+            app:drawableStartCompat="@drawable/ic_btn"
+            app:drawableTint="@drawable/selector_cl_nav_tab_tint" />
+
+        <TextView
+            android:id="@+id/settings_textView"
+            style="@style/drawer_item_style"
+            android:text="@string/settings"
+            app:drawableStartCompat="@drawable/ic_setting_2"
+            app:drawableTint="@drawable/selector_cl_nav_tab_tint" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/stroke60"/>
+
+        <TextView
+            android:id="@+id/log_out_textView"
+            style="@style/drawer_item_style"
+            android:text="@string/sign_out"
+            android:textColor="@color/mainBlack"
+            android:background="@drawable/bg_white_color6_ripple"
+            app:drawableStartCompat="@drawable/ic_logout" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/version_number_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="24dp"
+        android:fontFamily="@font/regular"
+        android:lines="1"
+        android:text="V 0.0.1"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/mainBlack60"
+        android:textSize="13sp" />
+
+</LinearLayout>

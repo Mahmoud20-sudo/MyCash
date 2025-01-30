@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:addStatesFromChildren="true"
+    android:background="@drawable/selector_bg_edittext"
+    android:paddingHorizontal="16dp"
+    tools:showIn="@layout/fragment_log_in">
+
+    <ImageView
+        android:id="@+id/country_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_flag_saudi_arabia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/countyCodePicker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/countyCodePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawablePadding="10dp"
+        android:elevation="0dp"
+        android:fontFamily="@font/regular"
+        android:paddingStart="10dp"
+        android:paddingEnd="8dp"
+        android:textColor="@color/mainBlack"
+        android:text="@string/_966"
+        android:textSize="14sp"
+        android:textDirection="ltr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/divider_view"
+        app:layout_constraintStart_toEndOf="@id/country_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider_view"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="12dp"
+        android:background="@color/stroke60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/phone_number_editText"
+        app:layout_constraintStart_toEndOf="@id/countyCodePicker"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phone_number_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="phone"
+        android:background="@android:color/transparent"
+        android:digits="1234567890"
+        android:fontFamily="@font/regular"
+        android:hint="@string/phone_number_hint"
+        android:inputType="phone"
+        android:lines="1"
+        android:maxLength="9"
+        android:padding="16dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/mainBlack"
+        android:textColorHint="@color/mainBlack60"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/divider_view"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    

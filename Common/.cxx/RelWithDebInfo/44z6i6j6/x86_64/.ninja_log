@@ -1,0 +1,5 @@
+# ninja log v5
+0	306	1728822836120656193	CMakeFiles/native-lib.dir/native-lib.cpp.o	4dcba8603ad12dd6
+307	350	1728822836166009736	/Users/mahmoud08live.com/AndroidStudioProjects/MyCash/Common/build/intermediates/cxx/RelWithDebInfo/44z6i6j6/obj/x86_64/libnative-lib.so	638b3b1b6971a6dc
+1	5	0	clean	ab3d94d649c57c06
+0	5	0	clean	ab3d94d649c57c06

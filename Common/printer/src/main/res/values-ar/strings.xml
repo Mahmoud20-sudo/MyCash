@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_permission">لا يوجد إذن تحديد المواقع</string>
+    <string name="permission">إذونات</string>
+    <string name="no_read">لا يوجد إذن قراءة الملف</string>
+    <string name="not_connected">غير متصل</string>
+    <string name="conn_fail">فشل الاتصال</string>
+    <string name="conn_success">نجح الاتصال</string>
+    <string name="disconnect">قطع الاتصال</string>
+    <string name="none_usb_device">لا يوجد جهاز USB</string>
+</resources>

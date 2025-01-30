@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.codeIn.myCash.ui.home.reports.inventory_details.InventoryDetailsFragment">
+
+
+    <include
+        layout="@layout/icon_mada_layout"
+        android:id="@+id/mada_layout"
+        android:layout_alignParentStart="true"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:scrollbarThumbVertical="@drawable/scroll_bar"
+        android:scrollbars="vertical"
+        android:scrollbarSize="1px"
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@id/mada_layout"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="false"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/back_arrow"
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/content_description_reload_image"
+                    android:focusable="true"
+                    android:paddingVertical="8dp"
+                    android:src="@drawable/ic_arrow_left" />
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="false"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:text="@string/inventory_process"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/main_editText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="16dp">
+
+                <TextView
+                    android:textColor="@color/mainBlack60"
+                    android:text="@string/time"
+                    android:id="@+id/time_label_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="name"
+                    android:text="21/08/2021, 02:22 AM"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="name"
+                    android:text="@string/report_result" />
+
+                <ImageView
+                    android:id="@+id/more_btn"
+                    android:src="@drawable/ic_more_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:textColor="@color/mainBlack60"
+                    android:id="@+id/product_name_tv"
+                    style="@style/main_editText"
+                    android:layout_marginBottom="8dp"
+                    android:drawableStart="@drawable/ic_bag"
+                    android:text="@string/product_name" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/product_barcode_tv"
+                        style="@style/main_editText"
+                        android:layout_marginBottom="8dp"
+                        android:autofillHints="name"
+                        android:drawableStart="@drawable/ic_barcode"
+                        android:hint="@string/product_barcode"
+                        android:inputType="text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="false"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="11dp"
+                    android:text="@string/inventory_result"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width=".5dp"
+                    android:layout_height="match_parent"
+                    android:background="#99E8E8E8" />
+
+                <TextView
+                    android:id="@+id/request_perishable_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/regular"
+                    android:text="request to enter a perishable quantity"
+                    android:textColor="@color/green"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#99E8E8E8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/bg_white_r12_s1_stroke60_ripple"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp"
+                android:paddingTop="18dp"
+                android:paddingBottom="23dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center|start"
+                        android:text="@string/purchase_price"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_arrow_left_green" />
+
+                    <TextView
+                        android:id="@+id/purchase_price_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center|end"
+                        android:text="0.00"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center|start"
+                        android:text="@string/sale_price"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_arrow_left_green" />
+
+                    <TextView
+                        android:id="@+id/sale_price_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center|end"
+                        android:text="0.00"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center|start"
+                        android:text="@string/the_remaining_quantity"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_arrow_left_green" />
+
+                    <TextView
+                        android:id="@+id/remaining_quantity_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center|end"
+                        android:text="0.00"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center|start"
+                        android:text="@string/perishable_quantity"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_arrow_left_green" />
+
+                    <TextView
+                        android:id="@+id/perishable_quantity_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center|end"
+                        android:text="0.00"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

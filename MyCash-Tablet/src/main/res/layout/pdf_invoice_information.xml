@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_pdf_section"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="8dp"
+    tools:showIn="@layout/pdf_tax_bill">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="@string/invoice_information"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <TextView
+            style="@style/pdf_sub_text"
+            android:layout_weight="30"
+            android:text="@string/invoice_no_en"
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/invoice_no_textView"
+            style="@style/pdf_sub_text"
+            android:layout_weight="15"
+            android:text="2c2bc3b061c1240319868f38dffd0ab19_20230822"
+            android:textAlignment="center" />
+
+        <TextView
+            style="@style/pdf_sub_text"
+            android:layout_weight="30"
+            android:text="@string/invoice_no_ar"
+            android:textAlignment="viewEnd" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <TextView
+            style="@style/pdf_sub_text"
+            android:layout_weight="30"
+            android:text="@string/invoice_issue_date_en"
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/date_time_textView"
+            style="@style/pdf_sub_text"
+            android:layout_weight="15"
+            android:lines="1"
+            android:text="2023/08/22  19:25:16"
+            android:textAlignment="center" />
+
+        <TextView
+            style="@style/pdf_sub_text"
+            android:layout_weight="30"
+            android:text="@string/invoice_issue_date_ar"
+            android:textAlignment="viewEnd" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <TextView
+            style="@style/pdf_sub_text"
+            android:layout_weight="30"
+            android:text="@string/invoice_type_en"
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/invoice_type_textView"
+            style="@style/pdf_sub_text"
+            android:layout_weight="15"
+            android:lines="1"
+            android:text="0201000"
+            android:textAlignment="center" />
+
+        <TextView
+            style="@style/pdf_sub_text"
+            android:layout_weight="30"
+            android:text="@string/invoice_type_ar"
+            android:textAlignment="viewEnd" />
+
+    </LinearLayout>
+
+</LinearLayout>

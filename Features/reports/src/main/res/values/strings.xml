@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sales_reports">sales reports</string>
+    <string name="sales_invoices">sales invoices</string>
+    <string name="return_invoices">return invoices</string>
+    <string name="daily">daily</string>
+    <string name="monthly">monthly</string>
+    <string name="weekly">weekly</string>
+    <string name="yearly">yearly</string>
+    <string name="report_postpaid">postpaid</string>
+    <string name="products_inventory">products inventory</string>
+</resources>

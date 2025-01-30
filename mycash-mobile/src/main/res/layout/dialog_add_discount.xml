@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="49dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minWidth="240dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="24dp">
+
+                <TextView
+                    android:id="@+id/discount_textView"
+                    style="@style/settings_text_item"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/discount_type"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/ic_discount_circle" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_marginTop="8dp"
+                android:id="@+id/value_radio_button"
+                style="@android:style/Widget.CompoundButton.RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:button="@drawable/selector_ic_radio_button"
+                android:fontFamily="@font/regular"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                android:text="@string/value_discount"
+                android:textAlignment="viewStart"
+                android:textColor="@drawable/selector_cl_check_box_tint"
+                android:textSize="14sp"
+                app:buttonTint="@drawable/selector_cl_check_box_tint" />
+
+            <RadioButton
+                android:id="@+id/percentage_radio_button"
+                style="@android:style/Widget.CompoundButton.RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="-16dp"
+                android:button="@drawable/selector_ic_radio_button"
+                android:fontFamily="@font/regular"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                android:text="@string/percentage_discount"
+                android:textAlignment="viewStart"
+                android:textColor="@drawable/selector_cl_check_box_tint"
+                android:textSize="14sp"
+                app:buttonTint="@drawable/selector_cl_check_box_tint" />
+
+            <RadioButton
+                android:id="@+id/none_radio_button"
+                style="@android:style/Widget.CompoundButton.RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="-16dp"
+                android:layout_marginBottom="8dp"
+                android:button="@drawable/selector_ic_radio_button"
+                android:fontFamily="@font/regular"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                android:text="@string/none"
+                android:textAlignment="viewStart"
+                android:textColor="@drawable/selector_cl_check_box_tint"
+                android:textSize="14sp"
+                app:buttonTint="@drawable/selector_cl_check_box_tint" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

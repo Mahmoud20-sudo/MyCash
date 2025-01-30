@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:textDirection="rtl"
+    android:layoutDirection="rtl"
+    android:id="@+id/containerPDf"
+    android:orientation="vertical"
+    android:layout_width="410dp"
+    android:layout_height="730dp">
+    <androidx.core.widget.NestedScrollView
+        android:scrollbarSize="1px"
+        android:scrollbarThumbVertical="@drawable/scroll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/headerPDF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/logo"
+                    android:layout_width="171dp"
+                    android:layout_height="93dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <ImageView
+                        android:id="@+id/logoPDF"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center|right|top"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@id/logo"
+                    android:gravity="center|right|top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/invoice_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/semi_bold"
+                            android:textColor="@color/textColor"
+                            android:textDirection="rtl"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/name_store"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/semi_bold"
+                        android:singleLine="true"
+                        android:textColor="@color/textColor"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/branche_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/semi_bold"
+                        android:singleLine="true"
+                        android:textColor="@color/textColor"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/branche_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/semi_bold"
+                        android:singleLine="true"
+                        android:textColor="@color/textColor"
+                        android:textSize="8sp" />
+
+                    <LinearLayout
+                        android:id="@+id/commercial_record_no_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/semi_bold"
+                            android:singleLine="true"
+                            android:text="@string/commercialRecordNoPDF"
+                            android:textColor="@color/textColor"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:singleLine="true"
+                            android:id="@+id/commercial_record"
+                            android:textColor="@color/textColor"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/semi_bold"
+                            android:singleLine="true"
+                            android:text="@string/taxRecordNoPDf"
+                            android:textColor="@color/textColor"
+
+                            android:textSize="8sp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:singleLine="true"
+                            android:textColor="@color/textColor"
+                            android:id="@+id/tax_record"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/lineHeader"
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/stroke20" />
+
+            <LinearLayout
+                android:id="@+id/clientInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center|start|top"
+                    android:gravity="center|top|start"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start|top"
+                            android:text="@string/invoiceNoPDF"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="center|start|top"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/semi_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center|top"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="left|center|top"
+                            android:fontFamily="@font/regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start|top"
+                            android:text="@string/invoiceNoParentPDF"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="center|start|top"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/semi_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center|top"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="left|center|top"
+                            android:fontFamily="@font/regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right|top"
+                            android:text="@string/releaseDatePDF"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="center|start|top"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/semi_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center|top"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="left|center|top"
+                            android:fontFamily="@font/regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start|top"
+                            android:text="@string/timePDF"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="center|start|top"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/semi_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center|top"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="left|center|top"
+                            android:fontFamily="@font/regular" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/clientInfoData"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top|end"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="2dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start|top"
+                            android:text="@string/clientnamePDF"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:layout_marginEnd="4dp"
+                            android:singleLine="true"
+                            android:gravity="center|start|top"
+                            android:fontFamily="@font/semi_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center|top"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="left|center|top"
+                            android:fontFamily="@font/regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="2dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right|top"
+                            android:text="@string/clientCommercialNoPDf"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="center|right|top"
+                            android:layout_marginEnd="4dp"
+                            android:fontFamily="@font/semi_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center|top"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="left|center|top"
+                            android:fontFamily="@font/regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right|top"
+                            android:text="@string/clientTaxNoPDF"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="center|right|top"
+                            android:layout_marginEnd="4dp"
+                            android:fontFamily="@font/semi_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center|top"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="left|center|top"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right|top"
+                            android:text="@string/addressPDF"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="center|right|top"
+                            android:layout_marginEnd="4dp"
+                            android:fontFamily="@font/semi_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center|top"
+                            android:textColor="@color/black"
+                            android:textSize="8sp"
+                            android:singleLine="true"
+                            android:gravity="left|center|top"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/regular" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/headerProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:background="@color/stroke60"
+                android:weightSum="8">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_weight="1.5"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="2dp"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/semi_bold"
+                    android:layout_gravity="center|top"
+                    android:gravity="center|top"
+                    android:textColor="@color/textColor"
+                    android:text="@string/productPDF"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:textSize="8sp"
+
+                    android:fontFamily="@font/semi_bold"
+                    android:layout_gravity="start|top"
+                    android:gravity="center|top"
+                    android:textColor="@color/textColor"
+                    android:text="@string/pricePDF"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp" />
+
+
+
+
+
+                <TextView
+                    android:layout_marginEnd="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:textSize="8sp"
+
+                    android:fontFamily="@font/semi_bold"
+                    android:layout_gravity="top|center"
+                    android:gravity="top|center"
+                    android:textColor="@color/textColor"
+                    android:text="@string/qtyPDF"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/semi_bold"
+                    android:layout_gravity="top|center"
+                    android:gravity="top|center"
+                    android:textColor="@color/textColor"
+                    android:text="@string/totalWithVATPDF"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp" />
+
+                <!--                    <TextView-->
+                <!--                        android:layout_marginEnd="2dp"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:singleLine="true"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:textSize="10sp"-->
+                <!--                        -->
+                <!--                        android:fontFamily="@font/semi_bold"-->
+                <!--                        android:layout_gravity="top|center"-->
+                <!--                        android:gravity="top|center"-->
+                <!--                        android:textColor="@color/textColor"-->
+                <!--                        android:text="@string/taxableAmount"-->
+                <!--                        android:layout_marginBottom="12dp"-->
+                <!--                        android:layout_marginTop="12dp" />-->
+                <TextView
+                    android:layout_marginEnd="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:textSize="8sp"
+
+                    android:fontFamily="@font/semi_bold"
+                    android:layout_gravity="top|center"
+                    android:gravity="top|center"
+                    android:textColor="@color/textColor"
+                    android:text="@string/taxperPDF"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp" />
+                <TextView
+                    android:layout_marginEnd="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="8sp"
+
+                    android:fontFamily="@font/semi_bold"
+                    android:layout_gravity="top|center"
+                    android:gravity="top|center"
+                    android:textColor="@color/textColor"
+                    android:text="@string/taxValuePDF"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_weight="1.5"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="8sp"
+
+                    android:fontFamily="@font/semi_bold"
+                    android:layout_gravity="top|center"
+                    android:gravity="top|center"
+                    android:textColor="@color/textColor"
+                    android:text="@string/totalWithVATPDF"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                tools:itemCount="3"
+                android:id="@+id/productsInPDf"
+                android:scrollbars="vertical"
+                android:orientation="vertical"
+                android:scrollbarSize="1px"
+                android:scrollbarThumbVertical="@drawable/scroll_bar"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_invoice_pdf" />
+
+            <View
+                android:id="@+id/productLine"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/stroke20" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:weightSum="3">
+
+
+                <LinearLayout
+                    android:textDirection="rtl"
+                    android:layoutDirection="rtl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="right|center|top"
+                    android:gravity="center|right|top"
+                    android:layout_weight="2.3">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:maxLines="2"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:text="@string/totalWithVATPDF"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|end"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:text="@string/addedTaxPDF"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|left"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:text="@string/toatlAmountPDF"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|left"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:text="@string/discountPDF"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|left"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:text="@string/paymentPDF"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|left"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|left"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|left"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|left"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:text="@string/rrnPDF"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|left"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:text="@string/totalWithVATPDF"
+                            android:layout_width="0dp"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/semi_bold"
+                            android:textColor="@color/black"
+
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|left"
+                            android:layout_width="0dp"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/semi_bold"
+                            android:textColor="@color/black"
+
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:background="@color/stroke" />
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:text="@string/paidPDF"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|left"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/black"
+
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:layout_gravity="center|right|top"
+                            android:gravity="center|top|right"
+                            android:text="@string/totalReceivablePDF"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/semi_bold"
+                            android:textColor="@color/black"
+
+                            android:layout_marginEnd="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5" />
+
+                        <TextView
+                            android:layout_marginStart="4dp"
+                            android:singleLine="true"
+                            android:layout_gravity="center|left|top"
+                            android:gravity="top|left"
+                            android:layout_width="0dp"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/semi_bold"
+                            android:textColor="@color/black"
+
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="end|center|top"
+                    android:gravity="center|end|top"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineSummaryInvoice"
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/stroke20" />
+
+            <LinearLayout
+                android:textDirection="rtl"
+                android:layoutDirection="rtl"
+                android:id="@+id/footerPDF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginEnd="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!--                            <ImageView-->
+                    <!--                                android:id="@+id/logoFooter"-->
+                    <!--                                android:layout_width="60dp"-->
+                    <!--                                android:layout_height="60dp"-->
+                    <!--                                android:scaleType="fitXY" />-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center|top"
+                        android:layout_marginTop="8dp"
+                        android:textSize="8sp"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/check"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center|top"
+                        android:layout_marginTop="4dp"
+
+                        android:textSize="8sp"
+                        android:fontFamily="@font/semi_bold"
+                        android:textColor="@color/check"
+                        />
+
+                    <LinearLayout
+                        android:layoutDirection="rtl"
+                        android:textDirection="rtl"
+                        android:visibility="gone"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/taxNumberPDF"
+
+                            android:singleLine="true"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/textColor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:singleLine="true"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/textColor" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/powered_by" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginStart="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center|end|bottom"
+                    android:gravity="center|end|bottom"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        >
+                        <ImageView
+                            android:id="@+id/zatcaQR"
+                            android:layout_width="80dp"
+                            android:scaleType="fitXY"
+                            android:layout_height="80dp" />
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/regular"
+                            android:textSize="8sp"
+                            android:textColor="@color/textColor"
+                            android:text="ZATCA QR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/invoiceQR"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitXY" />
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/regular"
+                            android:textSize="8sp"
+                            android:textColor="@color/textColor"
+                            android:text="MyCash QR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

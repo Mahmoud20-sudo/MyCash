@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_bar_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        card_view:cardElevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:id="@+id/logout_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="4dp"
+                android:text="@string/logout"
+                android:textColor="@color/red10"
+                android:textSize="12sp"
+                app:drawableEndCompat="@drawable/ic_logout"
+                app:drawableTint="@color/red10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/content_description_item_type_image"
+                android:scaleType="fitXY"
+
+                android:src="@drawable/topbar_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/language_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corners"
+                android:backgroundTint="@color/primaryColor15"
+                android:drawablePadding="14dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="2dp"
+                android:text="@string/language"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:drawableEndCompat="@drawable/ic_down_arrow"
+                app:drawableTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/middle_cardview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="60dp"
+        app:contentPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar_cardview"
+        card_view:cardCornerRadius="15dp"
+        card_view:cardElevation="5dp">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:text="@string/system_information"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp" />
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/commercial_registration_name_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    android:inputType="text"
+                    android:maxLength="150"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack30"
+                    android:textSize="12sp"
+                    app:myEndIconDrawable="@drawable/ic_receipt_edit"
+                    app:myHint="@string/commercial_registry_name"
+                    app:myHintEnabled="true" />
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/commercial_registration_number_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack30"
+                    android:textSize="12sp"
+                    app:myEndIconDrawable="@drawable/ic_document"
+                    app:myHint="@string/commercial_registration_no"
+                    app:myHintEnabled="true"
+                    app:showCounter="true" />
+
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/tax_number_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack30"
+                    android:textSize="12sp"
+                    app:myEndIconDrawable="@drawable/ic_shield_security"
+                    app:myHint="@string/tax_number2"
+                    app:myHintEnabled="true"
+                    app:showCounter="true" />
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/tax_vat_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack30"
+                    android:textSize="12sp"
+                    app:isTax="true"
+                    app:myEndIconDrawable="@drawable/ic_receipt"
+                    app:myHint="@string/vat_label"
+                    app:myHintEnabled="true" />
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/branch_name_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    android:inputType="text"
+                    android:maxLength="150"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack30"
+                    android:textSize="12sp"
+                    app:myEndIconDrawable="@drawable/ic_building"
+                    app:myHint="@string/store_name"
+                    app:myHintEnabled="true" />
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/branch_address_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    android:inputType="textPostalAddress"
+                    android:maxLength="150"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack30"
+                    android:textSize="12sp"
+                    app:myEndIconDrawable="@drawable/ic_location"
+                    app:myHint="@string/store_location"
+                    app:myHintEnabled="true" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/add_button"
+                    style="@style/full_button_Style"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/add_confirm"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_arrow_right"
+                    app:iconGravity="textEnd"
+                    app:iconTint="@color/white" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <include
+        android:id="@+id/loading_success"
+        layout="@layout/layout_success_custom"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/loading_custom"
+        layout="@layout/layout_loading_custom"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

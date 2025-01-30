@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.codeIn.myCash.ui.options.profile.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                style="@style/back_arrow"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/content_description_back_arrow"
+                android:src="@drawable/ic_arrow_left"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/title_textView" />
+
+            <TextView
+                android:id="@+id/title_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="@string/your_profile"
+                android:textColor="@color/mainBlack"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </RelativeLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrool"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="37dp"
+            android:scrollbarSize="1px"
+            android:scrollbarThumbVertical="@drawable/scroll_bar"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toBottomOf="@id/header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/personal_info"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/edit_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/edit"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="12sp"
+                        app:drawableEndCompat="@drawable/ic_edit_svg"
+                        app:drawableTint="@color/secondaryColor" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="8dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/user_imageView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="#99D1D3D4"
+                        android:contentDescription="@string/content_description_user_image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_images_placeholder"
+                        app:shapeAppearance="@style/scannerCircleImageView" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    style="@style/main_editText"
+                    android:layout_marginBottom="4dp"
+                    android:hint="@string/commercial_registry_name"
+                    app:drawableStartCompat="@drawable/ic_profile" />
+
+                <TextView
+                    android:id="@+id/phone_tv"
+                    style="@style/main_editText"
+                    android:layout_marginBottom="4dp"
+                    android:hint="@string/phone_number"
+                    app:drawableStartCompat="@drawable/ic_mobile" />
+
+                <TextView
+                    android:id="@+id/email_tv"
+                    style="@style/main_editText"
+                    android:layout_marginBottom="4dp"
+                    android:drawableStart="@drawable/ic_sms"
+                    android:hint="@string/email_address" />
+
+                <TextView
+                    android:id="@+id/commercial_registration_no_tv"
+                    style="@style/main_editText"
+                    android:drawableStart="@drawable/ic_shield_security20"
+                    android:hint="@string/commercial_registration_no"
+                    android:inputType="number" />
+
+
+                <TextView
+                    android:id="@+id/tax_record_number_tv"
+                    style="@style/main_editText"
+                    android:layout_marginVertical="4dp"
+                    android:drawableStart="@drawable/ic_document20"
+                    android:hint="@string/tax_registration_number"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tax_number_tv"
+                    style="@style/main_editText"
+                    android:layout_marginVertical="4dp"
+                    android:drawableStart="@drawable/ic_document20"
+                    android:hint="@string/tax" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/include_edittext"
+            layout="@layout/include_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="16dp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/secondaryColor"
+        android:indeterminateTintMode="src_atop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

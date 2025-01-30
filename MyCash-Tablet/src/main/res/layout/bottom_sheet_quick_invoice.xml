@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_sheet_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:nestedScrollingEnabled="false"
+    android:orientation="vertical"
+    app:behavior_peekHeight="40dp"
+    app:layout_behavior="@string/top_sheet_behavior">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="50dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:text="@string/add_your_products"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="14sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/selector_bg_edittext"
+                    >
+
+                    <TextView
+                        android:paddingHorizontal="16dp"
+                        android:id="@+id/another_product_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="10dp"
+                        android:elevation="0dp"
+                        android:fontFamily="@font/regular"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="16dp"
+                        android:text="@string/another_product"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/ic_add"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/divider_view1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.482" />
+
+                    <View
+                        android:id="@+id/divider_view1"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="12dp"
+                        android:background="@color/stroke60"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/product_name_editText"
+                        app:layout_constraintStart_toEndOf="@id/another_product_textView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:paddingHorizontal="16dp"
+                        android:id="@+id/product_name_editText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="phone"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/product_name"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:padding="16dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mainBlack"
+                        android:textColorHint="@color/mainBlack30"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/divider_view1"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="end"
+                        android:background="#99D1D3D4"
+                        android:clickable="true"
+                        android:id="@+id/scanner"
+                        android:contentDescription="@string/content_description_scanner_image"
+                        android:focusable="true"
+                        android:src="@drawable/ic_scanner_green"
+                        app:contentPadding="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/product_name_editText"
+                        app:layout_constraintDimensionRatio="H,1.0:1.0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/product_name_editText"
+                        app:shapeAppearance="@style/scannerCircleImageView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <EditText
+                    android:id="@+id/price_editText"
+                    style="@style/main_editText"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:autofillHints="price"
+                    android:drawableStart="@drawable/ic_coin"
+                    android:hint="@string/price"
+                    android:inputType="numberDecimal"
+                    app:layout_constraintTop_toBottomOf="@id/statement_editText" />
+
+                <EditText
+                    android:id="@+id/amount_editText"
+                    style="@style/main_editText"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:autofillHints="name"
+                    android:drawableStart="@drawable/ic_3d_cube"
+                    android:hint="@string/amount"
+                    android:inputType="number"
+                    app:layout_constraintTop_toBottomOf="@id/invoice_type_textView" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/tax"
+                    android:textColor="@color/mainBlack60"
+                    app:drawableStartCompat="@drawable/ic_percentage_circle" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/notTaxableRB"
+                        style="@style/radio_button_style"
+                        android:background="@drawable/selector_bg_layout"
+                        android:checked="true"
+                        android:drawablePadding="16dp"
+                        android:drawableStart="@drawable/selector_ic_radio_button"
+                        android:text="@string/not_taxable" />
+
+                    <RadioButton
+                        android:id="@+id/taxable_price_excludes_taxRB"
+                        style="@style/radio_button_style"
+                        android:background="@drawable/selector_bg_layout"
+                        android:text="@string/taxable_price_excludes_tax" />
+
+                    <RadioButton
+                        android:id="@+id/taxable_price_includes_taxRB"
+                        style="@style/radio_button_style"
+                        android:background="@drawable/selector_bg_layout"
+                        android:text="@string/taxable_price_includes_tax" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/products"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:scrollbarSize="1px"
+                android:scrollbarThumbVertical="@drawable/scroll_bar"
+                android:scrollbars="vertical"
+                android:paddingHorizontal="16dp"
+                android:layout_height="wrap_content"
+                tools:itemCount="2"
+                android:layout_marginTop="8dp"
+                tools:listitem="@layout/item_invoice_product"
+                />
+            <!-- divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/stroke60" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/invoice_type_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/invoice_type"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/simple_invoice_textView"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    style="@style/invoice_type_style"
+                    app:drawableTopCompat="@drawable/ic_receipt"
+                    android:text="@string/simple_invoice"
+                    app:layout_constraintEnd_toStartOf="@id/tax_invoice_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/invoice_type_textView" />
+
+                <TextView
+                    android:id="@+id/tax_invoice_textView"
+                    style="@style/invoice_type_style"
+                    app:drawableTopCompat="@drawable/ic_receipt"
+                    android:text="@string/tax_invoice"
+                    app:layout_constraintBottom_toBottomOf="@+id/simple_invoice_textView"
+                    app:layout_constraintEnd_toStartOf="@id/purchase_invoice_textView"
+                    app:layout_constraintStart_toEndOf="@id/simple_invoice_textView"
+                    app:layout_constraintTop_toTopOf="@id/simple_invoice_textView" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/purchase_invoice_textView"
+                    style="@style/invoice_type_style"
+                    app:drawableTopCompat="@drawable/ic_trash"
+                    android:text="@string/purchase_invoice"
+                    app:layout_constraintBottom_toBottomOf="@+id/simple_invoice_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tax_invoice_textView"
+                    app:layout_constraintTop_toTopOf="@id/simple_invoice_textView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/stroke60" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:layout_marginTop="16dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/credit_card_textView"
+                            style="@style/payment_method_style"
+                            android:text="@string/credit_card"
+                            app:drawableTopCompat="@drawable/ic_frame427319805"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="H,1.0:1.82"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.538"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/cash_textView"
+                            style="@style/payment_method_style"
+                            android:text="@string/cash"
+                            app:drawableTopCompat="@drawable/ic_wallet_money"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="H,1.0:1.82"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/postpaid_textView"
+                            style="@style/payment_method_style"
+                            android:text="@string/postpaid"
+                            app:drawableTopCompat="@drawable/ic_money_time"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="H,1.0:1.82"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:layout_marginTop="16dp"
+                    android:baselineAligned="false"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/cash_and_credit_card_textView"
+                            style="@style/payment_method_style"
+                            android:text="@string/cash_and_credit_card"
+                            app:drawableTopCompat="@drawable/ic_card_tick"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="H,1.0:1.82"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.538"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/postpaid_and_credit_card_textView"
+                            style="@style/payment_method_style"
+                            android:text="@string/postpaid_and_credit_card"
+                            app:drawableTopCompat="@drawable/ic_card_remove"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="H,1.0:1.82"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/installment_payment_textView"
+                            style="@style/payment_method_style"
+                            android:text="@string/installment_payment"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="H,1.0:1.82"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <!-- ImageView -->
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            android:src="@drawable/soon"
+                            app:layout_constraintEnd_toEndOf="@+id/installment_payment_textView"
+                            app:layout_constraintStart_toStartOf="@+id/installment_payment_textView"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/cash_paid_amount_editText"
+                    style="@style/main_editText"
+                    android:layout_marginVertical="6dp"
+                    android:autofillHints="phone"
+                    android:drawableStart="@drawable/ic_money_time"
+                    android:hint="@string/cash_paid_amount"
+                    android:inputType="number"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/remaining_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="6dp"
+                    android:background="@drawable/selector_bg_edittext"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/remaining"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mainBlack60"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/remaining_textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:text="0.0"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/mainBlack60"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/invoice_payment_date_editText"
+                    style="@style/main_editText"
+                    android:layout_marginVertical="6dp"
+                    android:autofillHints="phone"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_calendar_tick"
+                    android:focusable="false"
+                    android:hint="@string/invoice_payment_date"
+                    android:inputType="date"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/credit_card_paid_amount_editText"
+                    style="@style/main_editText"
+                    android:layout_marginVertical="6dp"
+                    android:autofillHints="phone"
+                    android:drawableStart="@drawable/ic_calendar_tick"
+                    android:hint="@string/bank_card_paid_amount"
+                    android:inputType="date"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="18dp"
+                    android:background="#99E8E8E8" />
+
+                <CheckBox
+                    android:id="@+id/add_client_CheckBox"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="15dp"
+                    android:button="@drawable/selector_ic_check_box"
+                    android:checked="false"
+                    android:fontFamily="@font/regular"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="2dp"
+                    android:text="@string/add_customer_data_to_the_current_invoice"
+                    android:textColor="@drawable/selector_cl_remember_me"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/password_text_input_layout"
+                    app:layout_constraintTop_toBottomOf="@id/password_text_input_layout" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#99E8E8E8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="50dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/regular"
+                            android:text="@string/initial_total"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/initial_total_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/semi_bold"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/regular"
+                            android:id="@+id/vat_label"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/vat_15_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/semi_bold"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/regular"
+                            android:text="@string/discount"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/discount_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/semi_bold"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/regular"
+                            android:text="@string/total"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/total_price_textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/semi_bold"
+                            android:lines="1"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/primaryColor"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/pay_invoice_Button"
+                            style="@style/big_button_Style"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/semi_bold"
+                            android:text="@string/pay_invoice"
+                            android:textColor="@color/white"
+                            app:backgroundTint="@null"
+                            app:cornerRadius="100dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/back_Button"
+                            style="@style/big_button_Style"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_white_r100_s1_secondary_ripple"
+                            android:fontFamily="@font/semi_bold"
+                            android:text="@string/back"
+                            android:textColor="@color/primaryColor"
+                            app:backgroundTint="@null"
+                            app:cornerRadius="100dp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_top_sheet"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/arrow_imageView"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/ic_double_arrow_down"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/regular"
+            android:text="@string/quick_invoice"
+            android:textAlignment="viewStart"
+            android:textColor="@color/whiteText"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/arrow_imageView"
+            app:layout_constraintEnd_toStartOf="@id/arrow_imageView"
+            app:layout_constraintTop_toTopOf="@id/arrow_imageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

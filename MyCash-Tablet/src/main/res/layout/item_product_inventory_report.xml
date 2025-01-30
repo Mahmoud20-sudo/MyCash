@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_17sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:background="@drawable/bg_main_black10_r12_s1">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/productInventoryTitleTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/bill_bold"
+        android:text="@string/products_inventory_report"
+        android:textColor="@color/mainBlack"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dateTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:fontFamily="@font/bill_bold"
+        android:text="@string/date"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_10sdp"
+        app:drawableStartCompat="@drawable/ic_calendar_2"
+        app:layout_constraintEnd_toStartOf="@+id/dateTvValueTv"
+        app:layout_constraintStart_toStartOf="@+id/productInventoryTitleTv"
+        app:layout_constraintTop_toBottomOf="@+id/productInventoryTitleTv"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dateTvValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/bill_bold"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/dateTv"
+        app:layout_constraintEnd_toEndOf="@+id/productInventoryTitleTv"
+        app:layout_constraintStart_toEndOf="@id/dateTv"
+        app:layout_constraintTop_toTopOf="@+id/dateTv"
+        app:layout_goneMarginStart="@dimen/_17sdp"
+        tools:text="20/08/2022" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/totalTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:fontFamily="@font/bill_bold"
+        android:text="@string/total"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_10sdp"
+        app:drawableStartCompat="@drawable/ic_arrow_left_main_black"
+        app:layout_constraintEnd_toStartOf="@+id/totalValueTv"
+        app:layout_constraintStart_toStartOf="@+id/dateTv"
+        app:layout_constraintTop_toBottomOf="@+id/dateTv"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/totalValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/bill_bold"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/totalTv"
+        app:layout_constraintEnd_toEndOf="@+id/dateTvValueTv"
+        app:layout_constraintStart_toEndOf="@id/totalTv"
+        app:layout_constraintTop_toTopOf="@+id/totalTv"
+        app:layout_goneMarginStart="@dimen/_17sdp"
+        tools:text="400" />
+
+
+    <View
+        android:id="@+id/inventoryView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_jungel_green_bottom_r12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalTv" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/showDetailsTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginVertical="@dimen/_7sdp"
+        android:fontFamily="@font/bill_regular"
+        android:text="@string/show_details"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/inventoryView"
+        app:layout_constraintEnd_toEndOf="@+id/inventoryView"
+        app:layout_constraintStart_toStartOf="@+id/inventoryView"
+        app:layout_constraintTop_toTopOf="@+id/inventoryView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

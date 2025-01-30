@@ -1,0 +1,56 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:2:1-31:12
+	package
+		INJECTED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.INTERNET
+ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:7:22-64
+application
+ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:9:5-29:19
+provider#androidx.startup.InitializationProvider
+ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:10:9-20:20
+	tools:node
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:14:13-31
+	android:authorities
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:12:13-68
+	android:exported
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:11:13-67
+meta-data#net.geidea.paymentsdk.internal.di.SdkInitializer
+ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:16:13-19:19
+	android:value
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:18:17-49
+	android:name
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:17:17-80
+activity#net.geidea.paymentsdk.flow.pay.PaymentActivity
+ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:22:9-28:15
+	android:screenOrientation
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:27:13-55
+	android:label
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:25:13-56
+	android:hardwareAccelerated
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:24:13-47
+	android:windowSoftInputMode
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:26:13-55
+	android:name
+		ADDED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml:23:13-53
+uses-sdk
+INJECTED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml
+INJECTED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/mahmoud08live.com/AndroidStudioProjects/MyCash/geidea/src/main/AndroidManifest.xml

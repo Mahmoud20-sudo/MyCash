@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/products_layout"
+    android:layout_width="match_parent"
+    android:layout_height="104dp"
+    android:layout_marginVertical="4dp"
+    android:background="@drawable/bg_white_r12_s1_stroke60">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/product_imageView"
+        android:layout_width="96dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/content_description_product_imageview"
+        android:paddingStart="0dp"
+        android:paddingEnd="-12dp"
+        android:layout_margin="2dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/productCircleImageView" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#99E8E8E8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/product_imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/product_name_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/regular"
+        android:lines="1"
+        android:textAlignment="viewStart"
+        android:textColor="@color/mainBlack"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/product_imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ساعة اللياقة البدنية الذكية - أبيض" />
+
+    <TextView
+        android:id="@+id/product_price_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/semi_bold"
+        android:lines="1"
+        android:textAlignment="viewStart"
+        android:textColor="@color/mainBlack"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/product_name_textView"
+        app:layout_constraintTop_toBottomOf="@id/product_name_textView"
+        tools:text="5598 ر.س" />
+
+    <TextView
+        android:id="@+id/add_discount_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/semi_bold"
+        android:lines="1"
+        android:textAlignment="viewStart"
+        android:textColor="@color/secondaryColor"
+        android:textSize="11sp"
+        android:text="@string/add_discount"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_name_textView" />
+
+    <CheckBox
+        style="@style/MyCheckboxStyle"
+        android:id="@+id/update_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/semi_bold"
+        android:lines="1"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/secondaryColor"
+        android:textSize="11sp"
+        android:button="@drawable/selector_ic_check_box"
+        android:checked="false"
+        android:visibility="gone"
+        android:paddingVertical="8dp"
+        android:paddingStart="6dp"
+        android:text="@string/update_stock"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_name_textView" />
+
+    <TextView
+        android:id="@+id/offer_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_secondary_r8_ripple"
+        android:drawablePadding="4dp"
+        android:fontFamily="@font/semi_bold"
+        android:lines="1"
+        android:padding="8dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:visibility="visible"
+        android:layout_marginBottom="16dp"
+        app:drawableStartCompat="@drawable/ic_tag"
+        app:layout_constraintStart_toStartOf="@id/product_name_textView"
+        app:layout_constraintTop_toBottomOf="@id/product_price_textView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="10%" />
+
+    <TextView
+        android:id="@+id/specify_amount_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:fontFamily="@font/semi_bold"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryColor"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/increase_imageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/product_name_textView"
+        app:layout_constraintTop_toBottomOf="@id/product_price_textView" />
+
+    <ImageView
+        android:id="@+id/increase_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_white_r8_s1_stroke_ripple"
+        android:contentDescription="@string/content_description_increase_imageview"
+        android:padding="11dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintEnd_toStartOf="@id/count_textView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_price_textView" />
+
+    <TextView
+        android:id="@+id/count_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/bg_white_r8_s1_stroke_ripple"
+        android:fontFamily="@font/semi_bold"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/mainBlack"
+        android:textSize="12sp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/increase_imageView"
+        app:layout_constraintEnd_toStartOf="@id/decrease_imageView"
+        app:layout_constraintTop_toTopOf="@id/increase_imageView"
+        tools:text="2" />
+
+    <ImageView
+        android:id="@+id/decrease_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_white_r8_s1_stroke_ripple"
+        android:contentDescription="@string/content_description_decrease_imageview"
+        android:paddingHorizontal="11dp"
+        android:src="@drawable/ic_trash_gray"
+        app:tint="@color/mainBlack"
+        app:layout_constraintBottom_toBottomOf="@id/increase_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/increase_imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    

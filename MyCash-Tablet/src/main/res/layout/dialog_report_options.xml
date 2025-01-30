@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginStart="449dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="49dp"
+    android:background="@drawable/bg_white_r12_s1_stroke60">
+
+    <TextView
+        android:id="@+id/print_current_report_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/regular"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:text="@string/print_current_report"
+        android:textAlignment="viewStart"
+        android:textColor="@color/mainBlack70"
+        android:textSize="14sp"
+        app:drawableStartCompat="@drawable/ic_printer"
+        app:layout_constraintBottom_toTopOf="@id/print_all_reports_textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/print_all_reports_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/regular"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:text="@string/print_all_reports"
+        android:textAlignment="viewStart"
+        android:textColor="@color/mainBlack70"
+        android:textSize="14sp"
+        app:drawableStartCompat="@drawable/ic_printer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/print_current_report_textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

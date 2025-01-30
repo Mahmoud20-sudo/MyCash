@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.codeIn.myCash.ui.home.invoices.invoices.InvoicesFragment">
+
+
+    <LinearLayout
+        android:id="@+id/top_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/title_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="16dp"
+                android:fontFamily="@font/regular"
+                android:text="@string/invoices"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                style="@style/back_arrow_"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/content_description_back_arrow"
+                android:src="@drawable/ic_arrow_left" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="#99E8E8E8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_s1_main_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="0dp"
+                android:layout_height="41dp"
+                android:layout_weight=".55"
+                android:queryHint="@string/search_with_invoice_number_or_phone"
+                android:theme="@style/SearchViewStyle" />
+
+            <ImageView
+                android:id="@+id/transactions"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingVertical="8dp"
+                android:src="@drawable/ic_transactions" />
+
+            <ImageView
+                android:id="@+id/reconciliation"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingVertical="8dp"
+                android:src="@drawable/reconciliation" />
+
+            <ImageView
+                android:id="@+id/image_scanner"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:contentDescription="@string/content_description_scanner_image"
+                android:focusable="true"
+                android:paddingVertical="8dp"
+                android:src="@drawable/ic_scanner" />
+
+            <ImageView
+                android:id="@+id/date"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:contentDescription="@string/content_description_calender_image"
+                android:focusable="true"
+                android:paddingVertical="8dp"
+                android:src="@drawable/ic_calendar" />
+
+            <ImageView
+                android:id="@+id/add_imageView"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:contentDescription="@string/content_description_add_client"
+                android:focusable="true"
+                android:paddingVertical="8dp"
+                android:src="@drawable/ic_add_square"
+                android:visibility="gone"
+                app:tint="@color/primaryColor" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dateView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            android:drawableEnd="@drawable/ic_close_circle"
+            android:fontFamily="@font/regular"
+            android:text="@string/date"
+            android:textColor="@color/mainBlack"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/horizontalScroll"
+            android:background="@drawable/bg_white_s1_main_ripple"
+            android:paddingVertical=".5dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:clickable="false"
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:id="@+id/all_textView"
+                    style="@style/filter_text_style"
+                    android:text="@string/all" />
+
+                <TextView
+                    android:id="@+id/tax_invoice_textView"
+                    style="@style/filter_text_style"
+                    android:text="@string/tax_invoice" />
+
+                <TextView
+                    android:id="@+id/simple_invoice_textView"
+                    style="@style/filter_text_style"
+                    android:text="@string/simplified_tax_invoice" />
+
+                <TextView
+                    android:id="@+id/instant_invoices_textView"
+                    style="@style/filter_text_style"
+                    android:text="@string/instant_invoices" />
+
+
+                <TextView
+                    android:id="@+id/sale_invoice_textView"
+                    style="@style/filter_text_style"
+                    android:text="@string/sale_invoice" />
+
+
+                <TextView
+                    android:id="@+id/purchase_invoice_textView"
+                    style="@style/filter_text_style"
+                    android:text="@string/purchase_invoice"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/purchase_returned_textView"
+                    style="@style/filter_text_style"
+                    android:text="@string/purchase_return_invoices"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/sales_returned_textView"
+                    style="@style/filter_text_style"
+                    android:text="@string/sales_returned_invoices" />
+
+                <TextView
+                    android:id="@+id/payment_completed_textView"
+                    style="@style/filter_text_style"
+                    android:text="@string/payment_completed" />
+
+                <TextView
+                    android:id="@+id/payment_uncompleted_textView"
+                    style="@style/filter_text_style"
+                    android:text="@string/payment_uncompleted" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <com.codeIn.myCash.utilities.views.CustomRecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:overScrollMode="ifContentScrolls"
+        android:paddingHorizontal="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar_layout"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_invoice" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/emptyStateIv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_17sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar_layout"
+        app:srcCompat="@drawable/ic_empty_state"
+        tools:visibility="gone" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:lottie_autoPlay="true"
+        android:background="@color/white"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/anim_loading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar_layout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

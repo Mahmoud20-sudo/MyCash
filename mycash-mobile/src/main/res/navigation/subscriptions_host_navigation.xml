@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/subscriptions_host_navigation"
+    app:startDestination="@id/navigatsubscriptionsOptionsFragment">
+
+    <fragment
+        android:id="@+id/navigatsubscriptionsOptionsFragment"
+        android:name="com.codeIn.myCash.tab.ui.options.subscriptions.SubscriptionsOptionsFragment"
+        android:label="fragment_subscriptions_options"
+        tools:layout="@layout/fragment_subscriptions_options" >
+        <action
+            android:id="@+id/action_navigatsubscriptionsOptionsFragment_to_otherPackageSubscriptionsFragment"
+            app:destination="@id/otherPackageSubscriptionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherPackageSubscriptionsFragment"
+        android:name="com.codeIn.myCash.tab.ui.options.subscriptions.otherpackage.OtherPackageSubscriptionsFragment"
+        android:label="fragment_other_package_subscriptions"
+        tools:layout="@layout/fragment_other_package_subscriptions" />
+</navigation>

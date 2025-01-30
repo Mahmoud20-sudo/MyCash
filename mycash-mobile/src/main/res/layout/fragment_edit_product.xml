@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context="com.codeIn.myCash.ui.home.products.update_product.UpdateProductFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            style="@style/back_arrow"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintBottom_toBottomOf="@id/title_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_textView" />
+
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/regular"
+            android:text="@string/edit_product"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbarThumbVertical="@drawable/scroll_bar"
+            android:scrollbarSize="1px"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="37dp"
+            app:layout_constraintBottom_toTopOf="@id/buttons_layout"
+            app:layout_constraintTop_toBottomOf="@id/title_textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/product_imageView"
+                    android:layout_width="94dp"
+                    android:layout_height="94dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="#99D1D3D4"
+                    android:clickable="true"
+                    android:contentDescription="@string/content_description_new_product_image"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_images_placeholder"
+                    app:shapeAppearance="@style/scannerCircleImageView" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:paddingVertical="12dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="12sp"
+                    android:hint="@string/branch"
+                    android:drawableTint="@drawable/selector_cl_input_tint"
+                    android:fontFamily="@font/regular"
+                    android:drawablePadding="8dp"
+                    android:textAlignment="viewStart"
+                    android:background="@drawable/selector_bg_edittext"
+                    android:drawableStart="@drawable/ic_location"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack30"
+                    android:completionThreshold="1"
+                    android:dropDownVerticalOffset="8dp"
+                    />
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/product_name_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="name"
+                    android:layout_marginTop="8dp"
+                    app:myStartIconDrawable="@drawable/ic_bag"
+                    android:inputType="text"
+                    android:textColor="@color/mainBlack"
+                    android:gravity="center|start"
+                    android:layout_marginBottom="8dp"
+                    app:myHintEnabled="true"
+                    android:textColorHint="@color/mainBlack30"
+                    app:myHint="@string/product_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:maxLength="100"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/register_textView"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/categories"
+                    android:scrollbars="vertical"
+                    android:scrollbarSize="1px"
+                    android:layout_marginVertical="6dp"
+                    android:scrollbarThumbVertical="@drawable/scroll_bar"
+                    tools:itemCount="2"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_category_add_product" />
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                        android:id="@+id/product_barcode_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:enabled="true"
+                        android:autofillHints="name"
+                        app:myStartIconDrawable="@drawable/ic_barcode"
+                        android:inputType="number"
+                        android:textColor="@color/mainBlack"
+                        app:myHintEnabled="true"
+                        android:textColorHint="@color/mainBlack30"
+                        app:myHint="@string/product_barcode"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#99D1D3D4"
+                        android:clickable="true"
+                        android:id="@+id/scanner"
+                        android:contentDescription="@string/content_description_scanner_image"
+                        android:focusable="true"
+                        android:src="@drawable/ic_scanner_green"
+                        app:contentPadding="8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/product_barcode_editText"
+                        app:layout_constraintDimensionRatio="H,1.0:1.0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/product_barcode_editText"
+                        app:shapeAppearance="@style/scannerCircleImageView"  />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/product_desc_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    app:myStartIconDrawable="@drawable/ic_3d_cube"
+                    android:inputType="text"
+                    app:myHintEnabled="true"
+                    android:textColorHint="@color/mainBlack30"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/mainBlack"
+                    app:myHint="@string/product_description"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/cost_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    app:myStartIconDrawable="@drawable/ic_coin"
+                    android:inputType="numberDecimal"
+                    app:myHintEnabled="true"
+                    android:textColorHint="@color/mainBlack30"
+                    android:textColor="@color/mainBlack"
+                    android:visibility="gone"
+                    app:myHint="@string/buy_price"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/price_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    app:myStartIconDrawable="@drawable/ic_coin"
+                    android:inputType="numberDecimal"
+                    app:myHintEnabled="true"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack30"
+                    app:myHint="@string/price"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <com.codeIn.myCash.utilities.views.CustomTextInputLayout
+                    android:id="@+id/amount_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints="name"
+                    app:myStartIconDrawable="@drawable/ic_3d_cube"
+                    android:inputType="number"
+                    app:myHintEnabled="true"
+                    android:textColorHint="@color/mainBlack30"
+                    android:textColor="@color/mainBlack"
+                    app:myHint="@string/amount"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+
+                <!--            <LinearLayout-->
+                <!--                android:orientation="vertical"-->
+                <!--                android:layout_marginVertical="6dp"-->
+                <!--                android:addStatesFromChildren="true"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:id="@+id/discountGeneralContainer"-->
+                <!--                android:background="@drawable/selector_bg_edittext"-->
+                <!--                android:paddingHorizontal="16dp">-->
+
+
+                <!--                <RelativeLayout-->
+                <!--                    android:id="@+id/discountContainer"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="48dp">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/discount"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignParentStart="true"-->
+                <!--                        android:layout_centerInParent="true"-->
+                <!--                        android:drawablePadding="10dp"-->
+                <!--                        android:elevation="0dp"-->
+                <!--                        android:fontFamily="@font/regular"-->
+                <!--                        android:paddingStart="10dp"-->
+                <!--                        android:paddingTop="10dp"-->
+                <!--                        android:paddingEnd="16dp"-->
+                <!--                        android:paddingBottom="10dp"-->
+                <!--                        android:singleLine="true"-->
+                <!--                        android:text="@string/discount_type"-->
+                <!--                        android:textColor="@color/mainBlack80"-->
+                <!--                        android:textSize="14sp"-->
+                <!--                        app:drawableEndCompat="@drawable/ic_arrow_down" />-->
+
+                <!--                    <View-->
+                <!--                        android:id="@+id/line"-->
+                <!--                        android:layout_width="1dp"-->
+                <!--                        android:layout_height="18dp"-->
+                <!--                        android:layout_centerInParent="true"-->
+                <!--                        android:layout_marginStart="8dp"-->
+                <!--                        android:layout_marginEnd="8dp"-->
+                <!--                        android:layout_toEndOf="@id/discount"-->
+                <!--                        android:background="@color/stroke60" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/currency"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignParentEnd="true"-->
+                <!--                        android:layout_centerInParent="true"-->
+                <!--                        android:fontFamily="@font/regular"-->
+                <!--                        android:paddingTop="10dp"-->
+                <!--                        android:paddingEnd="16dp"-->
+                <!--                        android:paddingBottom="10dp"-->
+                <!--                        android:singleLine="true"-->
+                <!--                        android:textAlignment="viewStart"-->
+                <!--                        android:textColor="@color/mainBlack"-->
+                <!--                        android:textSize="12sp" />-->
+
+                <!--                    <EditText-->
+                <!--                        android:id="@+id/discountProduct"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerInParent="true"-->
+                <!--                        android:layout_marginEnd="8dp"-->
+                <!--                        android:layout_toStartOf="@id/currency"-->
+                <!--                        android:layout_toEndOf="@id/line"-->
+                <!--                        android:background="@android:color/transparent"-->
+                <!--                        android:enabled="false"-->
+                <!--                        android:fontFamily="@font/regular"-->
+                <!--                        android:gravity="center|start"-->
+                <!--                        android:hint="@string/discount"-->
+                <!--                        android:inputType="numberDecimal"-->
+                <!--                        android:padding="16dp"-->
+                <!--                        android:paddingTop="10dp"-->
+                <!--                        android:paddingBottom="10dp"-->
+                <!--                        android:singleLine="true"-->
+                <!--                        android:textAlignment="viewStart"-->
+                <!--                        android:textColor="@color/mainBlack"-->
+                <!--                        android:textColorHint="@color/mainBlack30"-->
+                <!--                        android:textSize="12sp" />-->
+                <!--                </RelativeLayout>-->
+                <!--                <View-->
+                <!--                    android:visibility="gone"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="1dp"-->
+                <!--                    android:background="@color/stroke60"-->
+                <!--                    android:id="@+id/line2"-->
+                <!--                    android:layout_centerInParent="true" />-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:visibility="gone"-->
+                <!--                    android:id="@+id/typeDiscounts"-->
+                <!--                    android:orientation="vertical"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content">-->
+
+                <!--                    <LinearLayout-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginTop="8dp"-->
+                <!--                        android:orientation="horizontal">-->
+
+                <!--                        <CheckBox-->
+                <!--                            android:id="@+id/moneyDiscount"-->
+                <!--                            android:layout_width="24dp"-->
+                <!--                            android:layout_height="24dp"-->
+                <!--                            android:layout_gravity="center"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:button="@drawable/selector_ic_radio_button" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_gravity="center"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:id="@+id/moneyDiscountText"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginStart="16dp"-->
+                <!--                            android:singleLine="true"-->
+                <!--                            android:fontFamily="@font/regular"-->
+                <!--                            android:text="@string/value_discount"-->
+                <!--                            android:textColor="@drawable/selector_discount"-->
+                <!--                            android:textSize="14sp" />-->
+                <!--                    </LinearLayout>-->
+
+                <!--                    <LinearLayout-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginBottom="16dp"-->
+                <!--                        android:orientation="horizontal">-->
+
+                <!--                        <CheckBox-->
+                <!--                            android:id="@+id/percentageDiscount"-->
+                <!--                            android:layout_width="24dp"-->
+                <!--                            android:layout_height="24dp"-->
+                <!--                            android:layout_gravity="center"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:button="@drawable/selector_ic_radio_button" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_gravity="center"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:id="@+id/percentageDiscountText"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginStart="16dp"-->
+                <!--                            android:singleLine="true"-->
+                <!--                            android:fontFamily="@font/regular"-->
+                <!--                            android:text="@string/percentage_discount"-->
+                <!--                            android:textColor="@drawable/selector_discount"-->
+                <!--                            android:textSize="14sp" />-->
+                <!--                    </LinearLayout>-->
+                <!--                </LinearLayout>-->
+
+                <!--            </LinearLayout>-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="6dp"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/selector_bg_edittext"
+                    android:paddingHorizontal="16dp">
+
+                    <TextView
+                        android:id="@+id/discountPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="10dp"
+                        android:elevation="0dp"
+                        android:fontFamily="@font/regular"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="16dp"
+                        android:text="@string/discount_type"
+                        android:textColor="@color/mainBlack80"
+                        android:textSize="14sp"
+                        app:drawableEndCompat="@drawable/ic_arrow_down"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/divider_view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/divider_view"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="12dp"
+                        android:background="@color/stroke60"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/discount_editText"
+                        app:layout_constraintStart_toEndOf="@id/discountPicker"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/discount_editText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="phone"
+                        android:background="@android:color/transparent"
+                        android:digits="1234567890"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/discount"
+                        android:inputType="phone"
+                        android:lines="1"
+                        android:maxLength="11"
+                        android:padding="16dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mainBlack"
+                        android:textColorHint="@color/mainBlack30"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/currency"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintStart_toEndOf="@id/divider_view"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/regular"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="10dp"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginVertical="6dp"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/tax_purchase"
+                    android:textColor="@color/mainBlack60"
+                    app:drawableStartCompat="@drawable/selected_percentage_circle" />
+
+                <RadioGroup
+                    android:id="@+id/radio_purchase_group"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/notTaxableRB_purchase"
+                        style="@style/radio_button_style"
+                        android:background="@drawable/selector_bg_layout"
+                        android:checked="true"
+                        android:drawablePadding="16dp"
+                        android:drawableStart="@drawable/selector_ic_radio_button"
+                        android:text="@string/not_taxable" />
+
+                    <RadioButton
+                        android:id="@+id/taxable_price_excludes_taxRB_purchase"
+                        style="@style/radio_button_style"
+                        android:background="@drawable/selector_bg_layout"
+                        android:text="@string/taxable_price_excludes_tax" />
+
+                    <RadioButton
+                        android:id="@+id/taxable_price_includes_taxRB_purchase"
+                        style="@style/radio_button_style"
+                        android:background="@drawable/selector_bg_layout"
+                        android:text="@string/taxable_price_includes_tax" />
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="6dp"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/tax_sale"
+                    android:textColor="@color/mainBlack60"
+                    app:drawableStartCompat="@drawable/selected_percentage_circle" />
+
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/notTaxableRB"
+                        style="@style/radio_button_style"
+                        android:background="@drawable/selector_bg_layout"
+                        android:checked="true"
+                        android:drawablePadding="16dp"
+                        android:drawableStart="@drawable/selector_ic_radio_button"
+                        android:text="@string/not_taxable" />
+
+                    <RadioButton
+                        android:id="@+id/taxable_price_excludes_taxRB"
+                        style="@style/radio_button_style"
+                        android:background="@drawable/selector_bg_layout"
+                        android:text="@string/taxable_price_excludes_tax" />
+
+                    <RadioButton
+                        android:id="@+id/taxable_price_includes_taxRB"
+                        style="@style/radio_button_style"
+                        android:background="@drawable/selector_bg_layout"
+                        android:text="@string/taxable_price_includes_tax" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_Button"
+                style="@style/big_button_Style"
+                android:layout_weight="1"
+                android:text="@string/edit_product"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/loading_layout"
+            layout="@layout/layout_loading"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

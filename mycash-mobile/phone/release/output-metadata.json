@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.codeIn.myCash",
+  "variantName": "phoneRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 3,
+      "versionName": "1.0.3",
+      "outputFile": "app-phone-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

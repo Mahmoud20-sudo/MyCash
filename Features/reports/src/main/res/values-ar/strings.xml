@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sales_reports">تقارير المبيعات</string>
+    <string name="sales_invoices">فواتير البيع</string>
+    <string name="return_invoices">الفواتير المرتجعة</string>
+    <string name="daily">اليوم</string>
+    <string name="monthly">أسبوعيًا</string>
+    <string name="weekly">شهريًا</string>
+    <string name="yearly">سنويًا</string>
+    <string name="report_postpaid">إيصالات الدفع الأجل</string>
+    <string name="products_inventory">كميات المنتجات</string>
+</resources>

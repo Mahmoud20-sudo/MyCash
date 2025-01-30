@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_17sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:background="@drawable/bg_main_black10_r12_s1">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/expensesCV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_1sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/expensesReportIv"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_marginVertical="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_receipt_main_black" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/expensesTitleTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:fontFamily="@font/bill_regular"
+                android:text="@string/expenses_number"
+                android:textColor="@color/mainBlack60"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/expensesReportIv"
+                app:layout_constraintEnd_toStartOf="@+id/expensesCountTv"
+                app:layout_constraintStart_toEndOf="@+id/expensesReportIv"
+                app:layout_constraintTop_toTopOf="@+id/expensesReportIv"
+                app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/expensesCountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:fontFamily="@font/bill_regular"
+                android:textColor="@color/mainBlack60"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/expensesTitleTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/expensesTitleTv"
+                app:layout_constraintTop_toTopOf="@+id/expensesTitleTv"
+                app:layout_goneMarginStart="@dimen/_17sdp"
+                tools:text="#01" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/expensesNumberTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/bill_medium"
+        android:text="@string/expense_number"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintEnd_toStartOf="@+id/expensesNumberValueTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expensesCV"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/expensesNumberValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:fontFamily="@font/bill_medium"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/expensesNumberTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/expensesNumberTv"
+        app:layout_constraintTop_toTopOf="@+id/expensesNumberTv"
+        app:layout_goneMarginStart="@dimen/_17sdp"
+        tools:text="2233R544" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/expensesTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:fontFamily="@font/bill_medium"
+        android:text="@string/the_expenses"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintEnd_toStartOf="@+id/expensesValueTv"
+        app:layout_constraintStart_toStartOf="@+id/expensesNumberTv"
+        app:layout_constraintTop_toBottomOf="@+id/expensesNumberTv"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/expensesValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/bill_medium"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/expensesTv"
+        app:layout_constraintEnd_toEndOf="@+id/expensesNumberValueTv"
+        app:layout_constraintStart_toEndOf="@id/expensesTv"
+        app:layout_constraintTop_toTopOf="@+id/expensesTv"
+        app:layout_goneMarginStart="@dimen/_17sdp"
+        tools:text="23652 ر.س" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/valueOfExpensesTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:fontFamily="@font/bill_medium"
+        android:text="@string/value_of_expenses"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintEnd_toStartOf="@+id/valueOfExpensesValueTv"
+        app:layout_constraintStart_toStartOf="@+id/expensesTv"
+        app:layout_constraintTop_toBottomOf="@+id/expensesTv"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/valueOfExpensesValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/bill_medium"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/valueOfExpensesTv"
+        app:layout_constraintEnd_toEndOf="@+id/expensesValueTv"
+        app:layout_constraintStart_toEndOf="@id/valueOfExpensesTv"
+        app:layout_constraintTop_toTopOf="@+id/valueOfExpensesTv"
+        app:layout_goneMarginStart="@dimen/_17sdp"
+        tools:text="23652 ر.س" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/timeTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_17sdp"
+        android:fontFamily="@font/bill_medium"
+        android:text="@string/time"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/timeValueTv"
+        app:layout_constraintStart_toStartOf="@+id/valueOfExpensesTv"
+        app:layout_constraintTop_toBottomOf="@+id/valueOfExpensesTv"
+        app:layout_goneMarginStart="@dimen/_17sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/timeValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/bill_medium"
+        android:textColor="@color/mainBlack60"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/timeTv"
+        app:layout_constraintEnd_toEndOf="@+id/valueOfExpensesValueTv"
+        app:layout_constraintStart_toEndOf="@id/timeTv"
+        app:layout_constraintTop_toTopOf="@+id/timeTv"
+        app:layout_goneMarginStart="@dimen/_17sdp"
+        tools:text="21-08-2022 02:22 AM" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginStart="49dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="49dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minWidth="240dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="24dp">
+
+                <TextView
+                    style="@style/settings_text_item"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:textAlignment="center"
+                    android:text="@string/payment_method"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="14sp"/>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <CheckBox
+            android:id="@+id/cash_radio_button"
+            style="@android:style/Widget.CompoundButton.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:button="@drawable/selector_ic_radio_button"
+            android:fontFamily="@font/regular"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:text="@string/cash"
+            android:enabled="false"
+            android:clickable="false"
+            android:textAlignment="viewStart"
+            android:textColor="@drawable/selector_cl_check_box_tint"
+            android:textSize="14sp"
+            app:buttonTint="@drawable/selector_cl_check_box_tint" />
+
+        <CheckBox
+            android:enabled="false"
+            android:clickable="false"
+            android:id="@+id/credit_card_radio_button"
+            style="@android:style/Widget.CompoundButton.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:button="@drawable/selector_ic_radio_button"
+            android:fontFamily="@font/regular"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:text="@string/credit_card"
+            android:textAlignment="viewStart"
+            android:textColor="@drawable/selector_cl_check_box_tint"
+            android:textSize="14sp"
+            app:buttonTint="@drawable/selector_cl_check_box_tint" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="16dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/pay_Button"
+                style="@style/big_button_Style"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/refund"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_Button"
+                style="@style/big_button_Style_secondary"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

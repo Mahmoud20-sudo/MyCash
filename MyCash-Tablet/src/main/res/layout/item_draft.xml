@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_s1_main_ripple"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--
+             we used imageView here instead of app:icon because it will be set programmatically
+             so we used imageView to control the size of the icon. whatever the size of the icon is it will be 25dp.
+             -->
+            <ImageView
+                android:id="@+id/icon_imageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@string/content_description_item_type_image"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/title_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/regular"
+                android:lines="1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:textSize="12sp"
+                tools:text="@string/expenses" />
+
+            <ImageView
+                android:id="@+id/delete_imageView"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/content_description_item_type_image"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="4dp"
+                android:rotation="45"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_add"
+                app:tint="@color/mainBlack" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/sub_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/regular"
+            android:lines="1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack"
+            android:textSize="12sp"
+            tools:text="@string/expenses" />
+
+        <TextView
+            android:id="@+id/extra_info_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/regular"
+            android:lines="1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mainBlack40"
+            android:textSize="11sp"
+            tools:text="@string/expenses" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

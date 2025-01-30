@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/bg_white_s1_main_ripple"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_s1_main_ripple"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_r12_s1_stroke60_ripple"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/semi_bold"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:text="@string/user_activities"
+                android:textSize="14sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/regular"
+                    android:lines="1"
+                    android:text="@string/date"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_calendar" />
+
+                <TextView
+                    android:id="@+id/date_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/regular"
+                    android:lines="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="12sp"
+                    tools:text="@string/date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/regular"
+                    android:lines="1"
+                    android:text="@string/branch"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_shop" />
+
+                <TextView
+                    android:id="@+id/branch_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/regular"
+                    android:lines="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="12sp"
+                    tools:text="@string/branch" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/regular"
+                    android:lines="1"
+                    android:text="@string/total_sales"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_money_send" />
+
+                <TextView
+                    android:id="@+id/total_sales_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/regular"
+                    android:lines="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/mainBlack60"
+                    android:textSize="12sp"
+                    tools:text="@string/total_sales" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#99E8E8E8" />
+
+        <FrameLayout
+            android:id="@+id/invoice_payment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryColor"
+            android:clickable="false"
+            android:elevation="2dp"
+            android:focusable="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/show_details_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:fontFamily="@font/regular"
+                android:lines="1"
+                android:paddingVertical="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:text="@string/show_details"
+                app:drawableStartCompat="@drawable/ic_tick_circle_small"
+                app:drawableTint="@color/primaryColor" />
+
+        </FrameLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

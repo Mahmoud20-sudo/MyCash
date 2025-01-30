@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reports_host_navigation"
+    app:startDestination="@id/navigation_reportsFragment">
+
+    <fragment
+        android:id="@+id/navigation_reportsFragment"
+        android:name="com.codeIn.myCash.ui.home.reports.reportsFragment.ReportsFragment"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports">
+        <action
+            android:id="@+id/action_navigation_reportsFragment_to_navigation_inventoryProcessFragment"
+            app:destination="@id/navigation_inventoryProcessFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_reportsFragment_to_inventoryDetailsFragment"
+            app:destination="@id/inventoryDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_inventoryProcessFragment"
+        android:name="com.codeIn.myCash.ui.home.reports.inventory_process.InventoryProcessFragment"
+        android:label="fragment_inventory_process"
+        tools:layout="@layout/fragment_inventory_process" />
+    <fragment
+        android:id="@+id/inventoryDetailsFragment"
+        android:name="com.codeIn.myCash.ui.home.reports.inventory_details.InventoryDetailsFragment"
+        android:label="fragment_inventory_details"
+        tools:layout="@layout/fragment_inventory_details" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

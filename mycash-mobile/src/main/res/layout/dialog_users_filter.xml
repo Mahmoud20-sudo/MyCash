@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginStart="49dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="49dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <TextView
+                style="@style/settings_text_item"
+                android:padding="16dp"
+                android:text="@string/filter"
+                android:textAlignment="center"
+                android:textColor="@color/mainBlack60"
+                android:textSize="14sp" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/date_textView"
+                style="@style/main_editText"
+                android:layout_marginVertical="6dp"
+                android:hint="@string/date_hint"
+                app:drawableStartCompat="@drawable/ic_calendar" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:fontFamily="@font/regular"
+                android:text="@string/branch"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                android:orientation="horizontal"
+                android:paddingHorizontal="24dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:importantForAccessibility="no"
+                    android:paddingVertical="16dp"
+                    android:src="@drawable/ic_shop" />
+
+                <Spinner
+                    android:id="@+id/branches_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginVertical="2dp"
+                    android:background="@color/white"
+                    android:paddingVertical="16dp"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:importantForAccessibility="no"
+                    android:paddingVertical="16dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:fontFamily="@font/regular"
+                android:text="@string/invoices"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="3dp">
+
+                <CheckBox
+                    android:id="@+id/payment_completed_checkBox"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/selector_ic_check_box"
+                    android:checked="false"
+                    android:fontFamily="@font/regular"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="2dp"
+                    android:text="@string/payment_completed"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="3dp">
+
+                <CheckBox
+                    android:id="@+id/payment_uncompleted_checkBox"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/selector_ic_check_box"
+                    android:checked="false"
+                    android:fontFamily="@font/regular"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="2dp"
+                    android:text="@string/payment_uncompleted"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/continue_Button"
+                    style="@style/big_button_Style"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="@string/continue_1"
+                    app:backgroundTint="@null" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel_Button"
+                    style="@style/big_button_Style_secondary"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"
+                    app:backgroundTint="@null" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

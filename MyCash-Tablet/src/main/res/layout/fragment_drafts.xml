@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+tools:context="com.codeIn.myCash.ui.options.drafts.DraftsFragment">
+
+
+    <include
+        layout="@layout/icon_mada_layout"
+        android:id="@+id/mada_layout"
+        android:layout_alignParentStart="true"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@id/mada_layout"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/back_arrow"
+            android:contentDescription="@string/content_description_back_arrow"/>
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:text="@string/drafts"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+            app:layout_constraintTop_toTopOf="@id/back_arrow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="start"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/back_arrow"
+            app:layout_constraintBottom_toTopOf="@id/delete_Button">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:clickable="false"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/back_arrow">
+
+                    <TextView
+                        android:id="@+id/all_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="5dp"
+                        android:text="@string/all"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/products_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="5dp"
+                        android:text="@string/products"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/invoices_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="5dp"
+                        android:text="@string/invoices"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/clients_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="5dp"
+                        android:text="@string/clients"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/users_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="5dp"
+                        android:text="@string/users"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/drafts_recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_draft" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delete_Button"
+            style="@style/big_button_Style"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_transparent_r100_s1_white_ripple"
+            android:paddingHorizontal="100dp"
+            android:text="@string/delete_all"
+            android:textColor="@color/error"
+            app:backgroundTint="@null"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_trash_gray"
+            app:iconGravity="textStart"
+            app:iconTint="@color/error"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/bg_primary_r100_ripple" android:state_enabled="true" />
+
+    <item>
+        <ripple android:color="@color/mainBlack">
+            <item android:id="@android:id/background">
+                <shape android:shape="rectangle">
+                    <gradient android:angle="270" android:endColor="@color/stroke60" android:startColor="@color/mainBlack30" />
+                    <corners android:radius="100dp" />
+                </shape>
+            </item>
+        </ripple>
+    </item>
+
+</selector>

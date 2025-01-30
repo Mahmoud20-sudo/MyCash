@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whiteText">#FFFFFFFF</color>
+
+    <color name="my_transparent_color">#00FFFFFF</color>
+
+    <color name="primaryColor">#232773</color>
+    <color name="primaryColorDark">#17194C</color>
+    <color name="primaryColor60">#99232773</color>
+    <color name="primaryColor20">#CC232773</color>
+
+    <color name="secondaryColor">#6EC531</color>
+    <color name="secondaryColorDark">#457A1B</color>
+    <color name="secondaryColor60">#996EC531</color>
+    <color name="secondaryColor40">#666EC531</color>
+    <color name="green">#6EC531</color>
+
+    <color name="gray">#404041</color>
+    <color name="textColor">#99404041</color>
+    <color name="stroke">#D1D3D4</color>
+    <color name="stroke20">#33D1D3D4</color>
+    <color name="stroke30">#4DD1D3D4</color>
+    <color name="stroke60">#99D1D3D4</color>
+
+    <color name="mainBlack">#2D2D2D</color>
+    <color name="mainBlack5">#0D2D2D2D</color>
+    <color name="mainBlack10">#1A2D2D2D</color>
+    <color name="mainBlack15">#262D2D2D</color>
+    <color name="mainBlack30">#4D2D2D2D</color>
+    <color name="mainBlack40">#662D2D2D</color>
+    <color name="mainBlack60">#992D2D2D</color>
+    <color name="mainBlack70">#B32D2D2D</color>
+    <color name="mainBlack80">#CC2D2D2D</color>
+z
+    <color name="error">#FF4B6B</color>
+    <color name="gold">#F2AE14</color>
+    <color name="lightGrey">#D0D5DD</color>
+    <color name="purple">#DEDFEA</color>
+
+    <color name="sunsetOrange">#EE9F2D</color>
+    <color name="invoiceBackground">#F1F1F1</color>
+    <color name="red">#FF0000</color>
+
+    <color name="check">#292B30</color>
+    <color name="grayishBlue">#344054</color>
+    <color name="grayishBlue85">#D9344054</color>
+    <color name="jungleGreen">#2A9D7C</color>
+</resources>

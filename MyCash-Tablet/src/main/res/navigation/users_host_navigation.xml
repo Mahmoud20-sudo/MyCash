@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_users_host_navigation.xml"
+    app:startDestination="@id/nav_usersFragment">
+
+    <fragment
+        android:id="@+id/nav_usersFragment"
+        android:name="com.codeIn.myCash.ui.options.users.users.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_nav_usersFragment_to_nav_addUserFragment"
+            app:destination="@id/nav_addUserFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_usersFragment_to_nav_userDetailsFragment"
+            app:destination="@id/nav_userDetailsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_usersFragment_to_editUsersFragment"
+            app:destination="@id/editUsersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_addUserFragment"
+        android:name="com.codeIn.myCash.ui.options.users.add_user.AddUserFragment"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user" />
+    <fragment
+        android:id="@+id/nav_userDetailsFragment"
+        android:name="com.codeIn.myCash.ui.options.users.user_details.UserDetailsFragment"
+        android:label="fragment_user_details"
+        tools:layout="@layout/fragment_user_details" >
+        <action
+            android:id="@+id/action_nav_userDetailsFragment_to_nav_userSalesReportFragment"
+            app:destination="@id/nav_userSalesReportFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_userDetailsFragment_to_nav_userActivitiesLogsFragment"
+            app:destination="@id/nav_userActivitiesLogsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <argument
+            android:name="user"
+            app:argType="com.codeIn.myCash.features.user.data.users.model.response.GetUsersDTO$Data$Data" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_userSalesReportFragment"
+        android:name="com.codeIn.myCash.ui.options.users.user_sales_report.UserSalesReportFragment"
+        android:label="fragment_user_sales_report"
+        tools:layout="@layout/fragment_user_sales_report" />
+    <fragment
+        android:id="@+id/nav_userActivityLogDetailsFragment"
+        android:name="com.codeIn.myCash.ui.options.users.activities_log_details.UserActivityLogDetailsFragment"
+        android:label="fragment_user_activity_log_details"
+        tools:layout="@layout/fragment_user_activity_log_details" >
+        <argument
+            android:name="activityLog"
+            app:argType="com.codeIn.myCash.ui.options.users.activities_logs.ActivityLog" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_userActivitiesLogsFragment"
+        android:name="com.codeIn.myCash.ui.options.users.activities_logs.UserActivitiesLogsFragment"
+        android:label="fragment_user_activities_logs"
+        tools:layout="@layout/fragment_user_activities_logs" >
+        <action
+            android:id="@+id/action_nav_userActivitiesLogsFragment_to_nav_userActivityLogDetailsFragment"
+            app:destination="@id/nav_userActivityLogDetailsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUsersFragment"
+        android:name="com.codeIn.myCash.ui.options.users.edit_user.EditUsersFragment"
+        android:label="fragment_edit_users"
+        tools:layout="@layout/fragment_edit_users" >
+        <argument
+            android:name="employeeId"
+            app:argType="integer" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="city"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="authority"
+            app:argType="integer" />
+        <argument
+            android:name="status"
+            app:argType="integer" />
+        <argument
+            android:name="branch_id"
+            app:argType="string" />
+    </fragment>
+</navigation>

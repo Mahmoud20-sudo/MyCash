@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codeIn.myCash.ui.home.clients_vendors.clients_and_vendors.ClientsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:fontFamily="@font/regular"
+                android:text="@string/clients"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/clients_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_r12_s1_stroke60_ripple"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:paddingHorizontal="36dp"
+                    android:paddingVertical="15dp"
+                    android:text="@string/clients"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/ic_profile_2user" />
+
+                <TextView
+                    android:id="@+id/vendors_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_r12_s1_stroke60_ripple"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:paddingHorizontal="36dp"
+                    android:paddingVertical="15dp"
+                    android:text="@string/vendors"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/ic_people" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#99E8E8E8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/log_out_imageView">
+
+                <SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_weight=".55"
+                    android:iconifiedByDefault="false"
+                    android:queryBackground="@null"
+                    android:queryHint="@string/search_with_name_or_phone"
+                    android:searchIcon="@drawable/ic_search_normal"
+                    android:textAlignment="viewStart"
+                    android:theme="@style/SearchViewStyle" />
+
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="true"
+                    android:contentDescription="@string/content_description_settings_image"
+                    android:focusable="true"
+                    android:paddingVertical="8dp"
+                    android:src="@drawable/ic_setting" />
+
+                <ImageView
+                    android:id="@+id/add_imageView"
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white_s1_main_ripple"
+                    android:clickable="true"
+                    android:contentDescription="@string/content_description_add_client"
+                    android:focusable="true"
+                    android:paddingVertical="8dp"
+                    android:src="@drawable/ic_add_square" />
+
+            </LinearLayout>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:scrollbars="none"
+                android:background="@drawable/bg_white_s1_main_ripple"
+                android:paddingVertical=".5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:clickable="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp">
+
+                    <TextView
+                        android:id="@+id/all_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:text="@string/all"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/payment_completed_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:text="@string/payment_completed"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/installment_payment_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/bg_white_r100_s1_stroke_ripple"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="24dp"
+                        android:text="@string/postpaid"
+                        android:textColor="@color/mainBlack"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#99E8E8E8" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="10dp"
+                android:orientation="vertical"
+                android:overScrollMode="ifContentScrolls"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_client" />
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/loading_layout"
+            layout="@layout/layout_loading"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

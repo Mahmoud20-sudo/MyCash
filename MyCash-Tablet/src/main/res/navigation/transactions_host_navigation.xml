@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transactions_host_navigation.xml"
+    app:startDestination="@id/navigation_transactionsFragment">
+
+    <fragment
+        android:id="@+id/navigation_transactionsFragment"
+        android:name="com.codeIn.myCash.ui.home.expenses.expenses.ExpensesFragment"
+        android:label="fragment_transactions"
+        tools:layout="@layout/fragment_transactions" >
+        <action
+            android:id="@+id/action_navigation_transactionsFragment_to_navigation_newExpenseFragment"
+            app:destination="@id/navigation_newExpenseFragment"
+            app:enterAnim="@anim/fade_in_with_scale"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_transactionsFragment_to_navigation_expenseDetailsFragment"
+            app:destination="@id/navigation_expenseDetailsFragment"
+            app:enterAnim="@anim/fade_in_with_scale"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            app:enterAnim="@anim/fade_in_with_scale"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_navigation_transactionsFragment_to_seeMoreExpensesFragment"
+            app:destination="@id/seeMoreExpensesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_newExpenseFragment"
+        android:name="com.codeIn.myCash.ui.home.expenses.add_expense.AddExpenseFragment"
+        android:label="fragment_new_expense"
+        tools:layout="@layout/fragment_new_expense" />
+    <fragment
+        android:id="@+id/navigation_expenseDetailsFragment"
+        android:name="com.codeIn.myCash.ui.home.expenses.expense_details.ExpenseDetailsFragment"
+        android:label="fragment_expense_details"
+        tools:layout="@layout/fragment_expense_details" >
+        <argument
+            android:name="expenseId"
+            app:argType="string" />
+        <action
+
+            android:id="@+id/action_navigation_expenseDetailsFragment_to_updateExpenseFragment"
+            app:destination="@id/updateExpenseFragment"
+            app:enterAnim="@anim/fade_in_with_scale"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_edit_expense"
+        android:id="@+id/updateExpenseFragment"
+        android:name="com.codeIn.myCash.ui.home.expenses.update_expense.UpdateExpenseFragment"
+        android:label="UpdateExpenseFragment" >
+        <argument
+            android:name="expense"
+            app:argType="com.codeIn.myCash.features.sales.data.expenses.remote.response.ExpenseModel" />
+
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_see_more_expenses"
+        android:id="@+id/seeMoreExpensesFragment"
+        android:name="com.codeIn.myCash.ui.home.expenses.see_more_expenses.SeeMoreExpensesFragment"
+        android:label="SeeMoreExpensesFragment" >
+        <action
+            app:enterAnim="@anim/fade_in_with_scale"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_seeMoreExpensesFragment_to_navigation_newExpenseFragment"
+            app:destination="@id/navigation_newExpenseFragment" />
+        <action
+            app:enterAnim="@anim/fade_in_with_scale"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_seeMoreExpensesFragment_to_navigation_expenseDetailsFragment"
+            app:destination="@id/navigation_expenseDetailsFragment" />
+    </fragment>
+
+</navigation>

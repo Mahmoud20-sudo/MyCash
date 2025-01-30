@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="49dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <TextView
+                style="@style/settings_text_item"
+                android:padding="16dp"
+                android:text="@string/tax"
+                app:drawableStartCompat="@drawable/selected_percentage_circle"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mainBlack60"
+                android:textSize="14sp"/>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_twenty_button_not_active"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_recycleView"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:paddingHorizontal="16dp"
+                android:layout_height="wrap_content"
+                android:addStatesFromChildren="true">
+
+                <TextView
+                    android:id="@+id/discountPicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="10dp"
+                    android:elevation="0dp"
+                    android:fontFamily="@font/regular"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/tax_type"
+                    android:textColor="@color/mainBlack80"
+                    android:textSize="14sp"
+                    app:drawableEndCompat="@drawable/ic_arrow_down"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/divider_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/divider_view"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="@color/stroke60"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tax_editText"
+                    app:layout_constraintStart_toEndOf="@id/discountPicker"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/tax_editText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:digits="1234567890"
+                    android:fontFamily="@font/regular"
+                    android:hint="@string/tax"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:maxLength="11"
+                    android:padding="16dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/mainBlack"
+                    android:textColorHint="@color/mainBlack30"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/currency"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toEndOf="@id/divider_view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/regular"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/mainBlack"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/stroke60"/>
+            <RadioGroup
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/taxable_include_price_radio_button"
+                    style="@android:style/Widget.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/selector_ic_radio_button"
+                    android:fontFamily="@font/regular"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/taxable_price_includes_tax"
+                    android:textAlignment="viewStart"
+                    android:textColor="@drawable/selector_cl_check_box_tint"
+                    android:textSize="14sp"
+                    app:buttonTint="@drawable/selector_cl_check_box_tint" />
+
+                <RadioButton
+                    android:id="@+id/taxable_exclude_price_radio_button"
+                    style="@android:style/Widget.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-16dp"
+                    android:button="@drawable/selector_ic_radio_button"
+                    android:fontFamily="@font/regular"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/taxable_price_excludes_tax"
+                    android:textAlignment="viewStart"
+                    android:textColor="@drawable/selector_cl_check_box_tint"
+                    android:textSize="14sp"
+                    app:buttonTint="@drawable/selector_cl_check_box_tint" />
+                <RadioButton
+                    android:id="@+id/not_taxable_radio_button"
+                    style="@android:style/Widget.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-16dp"
+                    android:layout_marginBottom="8dp"
+                    android:button="@drawable/selector_ic_radio_button"
+                    android:fontFamily="@font/regular"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/not_taxable"
+                    android:textAlignment="viewStart"
+                    android:textColor="@drawable/selector_cl_check_box_tint"
+                    android:textSize="14sp"
+                    app:buttonTint="@drawable/selector_cl_check_box_tint" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_Button"
+                style="@style/big_button_Style"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/add"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_Button"
+                style="@style/big_button_Style_secondary"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

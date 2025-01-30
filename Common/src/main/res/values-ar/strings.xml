@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="camera_permission">برجاء السماح لأذن الكاميرا</string>
+    <string name="scanner_cancelled">تم إلغاء الماسح الضوئي</string>
+    <string name="scan_qr_code">مسح رمز الاستجابة السريعة</string>
+    <string name="error">حدث خطأ ما، يرجى المحاولة مرة أخرى لاحقًا</string>
+
+</resources>
