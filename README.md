@@ -40,8 +40,6 @@ My Cash enables you to have an easy and fast experience with complete clarity an
  تظبيق موحد يمكنك من إدارة المبيعات والفواتير والمدفوعات بتكامل مع أنظمة المدفوعات والأنظمة الأخرى ,,,
  يمكنك ماي كاش من تجربة سهلة وسريعة بكل وضوح وإصدار الفواتير من دون الحاجة الى الانترنت واستخدام كل طرق الدفع.
 
-
-Happy eating!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -51,12 +49,15 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 * Kotlin
 * Room
+* Activities & Fragments
 * Hilt
 * Coroutines
-* Google SDKs(Maps, Analytics, Firebase,...etc)
+* Google SDKs(Analytics, Firebase,...etc)
 * Retrofit
-* LiveData
-
+* Flows
+* Jetpack Compose
+* Material Designs
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
